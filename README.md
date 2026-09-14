@@ -65,11 +65,3 @@ The `/docs` directory contains the project's source of truth:
 The `/references` directory contains the existing ZAN brand materials used as visual and contextual references.
 
 These materials should inform the implementation but should not be copied literally.
-
-## Development Principle
-
-The project should remain simple, maintainable, reusable, responsive, and easy to extend.
-
-AI development tools may assist with implementation, but all generated work must follow the project documentation and approved scope.
-
-No feature outside Phase 1 should be introduced without explicit approval.
