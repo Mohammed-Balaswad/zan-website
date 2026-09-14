@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-arabic: 'Tajawal', sans-serif;
+    --font-latin: 'Manrope', sans-serif;
+  }
+
+  html[dir="rtl"] body {
+    font-family: var(--font-arabic);
+  }
+
+  html[dir="ltr"] body {
+    font-family: var(--font-latin);
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styling for accessibility */
+  :focus-visible {
+    outline: 2px solid #C6A15B;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Subtle image overlay gradient */
+  .gradient-overlay-dark {
+    background: linear-gradient(180deg, rgba(6, 20, 33, 0.4) 0%, rgba(6, 20, 33, 0.85) 100%);
+  }
+
+  .gradient-overlay-horizontal-rtl {
+    background: linear-gradient(270deg, rgba(6, 20, 33, 0.95) 0%, rgba(6, 20, 33, 0.6) 60%, rgba(6, 20, 33, 0.2) 100%);
+  }
+
+  .gradient-overlay-horizontal-ltr {
+    background: linear-gradient(90deg, rgba(6, 20, 33, 0.95) 0%, rgba(6, 20, 33, 0.6) 60%, rgba(6, 20, 33, 0.2) 100%);
+  }
+}

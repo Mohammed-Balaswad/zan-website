@@ -1,0 +1,139 @@
+{
+  "common": {
+    "companyName": "ZAN Global Investments",
+    "shortName": "ZAN",
+    "tagline": "Strategic Investments, Sustainable Projects, Enduring Partnerships.",
+    "readMore": "Read More",
+    "exploreMore": "Explore More",
+    "contactUs": "Contact Us",
+    "investWithUs": "Invest With Us",
+    "exploreOpportunities": "Explore Opportunities",
+    "viewDetails": "View Details",
+    "status": "Status",
+    "location": "Location",
+    "sector": "Sector",
+    "partnerLogoPlaceholder": "Partner Logo (Placeholder)"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About ZAN",
+    "investment": "Investment",
+    "projects": "Investments & Projects",
+    "opportunities": "Investment Opportunities",
+    "partnershipsMenu": "Partnerships",
+    "services": "Services",
+    "partners": "Strategic Partners",
+    "partnerships": "Investors & Partnerships",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "ZAN Global Investments",
+      "title": "Investment Ecosystem & Project Development in Saudi Arabia",
+      "subtitle": "We own, manage, develop, and present high-potential investment projects while building strategic alliances with investors and corporate partners across key economic sectors.",
+      "primaryCta": "Explore Opportunities",
+      "secondaryCta": "About ZAN"
+    },
+    "positioning": {
+      "eyebrow": "About ZAN",
+      "title": "Empowering High-Value Projects & Sustainable Investment",
+      "paragraph1": "ZAN Global Investments was established as a Saudi investment firm dedicated to identifying, structuring, and developing high-impact investment opportunities.",
+      "paragraph2": "We operate through an integrated ecosystem spanning project development, management, strategic alignment, and operational solutions to deliver sustainable economic value.",
+      "stat1Title": "Strategic Sectors",
+      "stat1Desc": "Active across Hospitality, Logistics, and Real Estate",
+      "stat2Title": "Integrated Ecosystem",
+      "stat2Desc": "Development, Management, and Investment Structuring"
+    },
+    "projects": {
+      "eyebrow": "Projects & Portfolio",
+      "title": "High-Impact Investments Driving Economic Growth",
+      "viewAll": "Explore All Projects"
+    },
+    "opportunities": {
+      "eyebrow": "Open Opportunities",
+      "title": "Structured Opportunities for Partners & Investors",
+      "subtitle": "We present meticulously structured investment opportunities designed for institutional partners seeking high-value growth.",
+      "viewAll": "View All Opportunities"
+    },
+    "sectors": {
+      "eyebrow": "Core Sectors",
+      "title": "Strategic Investment Sectors",
+      "subtitle": "ZAN focuses its capital and expertise on key growth sectors driving national economic transformation.",
+      "hospitality": {
+        "title": "Hospitality & Tourism",
+        "desc": "Developing and managing premier hotel destinations and eco-resorts."
+      },
+      "logistics": {
+        "title": "Logistics & Urban Infrastructure",
+        "desc": "Constructing smart logistics parks and supply chain facilities."
+      },
+      "realestate": {
+        "title": "Real Estate & Urban Development",
+        "desc": "Delivering mixed-use commercial landmarks with modern architectural identity."
+      },
+      "services": {
+        "title": "Project Governance & Management",
+        "desc": "Providing executive oversight and strategic execution for key projects."
+      }
+    },
+    "partners": {
+      "eyebrow": "Strategic Alliances",
+      "title": "Long-Term Partnerships with Industry Leaders",
+      "subtitle": "We take pride in collaborating with prominent corporate partners to execute projects of lasting impact."
+    },
+    "cta": {
+      "title": "Seeking a Strategic Investment Partner?",
+      "subtitle": "Our executive team welcomes discussions regarding partnership models and joint investment ventures.",
+      "button": "Connect with Investment Team"
+    }
+  },
+  "footer": {
+    "rights": "All Rights Reserved © ZAN Global Investments",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "address": "Riyadh, Kingdom of Saudi Arabia",
+    "officialEmail": "info@zanglobal.sa",
+    "domain": "zanglobal.sa"
+  },
+  "contactForm": {
+    "title": "Business Inquiry & Contact Request",
+    "subtitle": "We welcome your inquiry to explore investment and strategic partnership opportunities.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "orgLabel": "Organization / Company",
+    "orgPlaceholder": "Enter company or organization name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "name@example.com",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+966 5X XXX XXXX",
+    "typeLabel": "Request Type",
+    "typeOptions": {
+      "investment": "Investment",
+      "partnership": "Strategic Partnership",
+      "projects": "Project Information",
+      "services": "Services Ecosystem",
+      "general": "General Inquiry",
+      "meeting": "Meeting Request"
+    },
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Subject title",
+    "messageLabel": "Request Details",
+    "messagePlaceholder": "Provide details regarding your inquiry...",
+    "consentLabel": "I agree to the privacy consent and allowing the ZAN team to contact me.",
+    "submitBtn": "Submit Request",
+    "submitting": "Submitting...",
+    "successTitle": "Request Submitted Successfully",
+    "successMessage": "Thank you for reaching out to ZAN. Our team will review your request and get back to you shortly.",
+    "errorTitle": "Submission Failed",
+    "errorMessage": "Please verify your details and try again.",
+    "validation": {
+      "nameRequired": "Full name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Invalid email address format",
+      "phoneRequired": "Phone number is required",
+      "typeRequired": "Please select a request type",
+      "messageRequired": "Request details are required",
+      "consentRequired": "Consent is required to proceed"
+    }
+  }
+}
