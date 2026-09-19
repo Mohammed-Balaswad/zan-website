@@ -12,14 +12,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-border-dark">
           {/* Brand Info */}
           <div className="space-y-4">
-            <div>
-              <h2 className="text-2xl font-black tracking-wider text-white font-latin">
-                ZAN
-              </h2>
-              <p className="text-[10px] uppercase tracking-widest text-gold font-bold font-latin mt-0.5">
-                Global Investments
-              </p>
-            </div>
+            <Link
+              to={`/${language}`}
+              onClick={(e) => {
+                if (window.location.pathname === `/${language}` || window.location.pathname === `/${language}/`) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+              className="inline-block group cursor-pointer py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-btn"
+              aria-label={t('common.companyName')}
+            >
+              <img
+                src="/images/ZAN-LOGO-2.svg"
+                alt="ZAN Global Investments Logo"
+                className="h-7 sm:h-8 md:h-9 w-auto max-w-[130px] sm:max-w-[150px] object-contain transition-all duration-300 brightness-0 invert drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] group-hover:scale-[1.02]"
+              />
+            </Link>
             <p className="text-xs text-text-light leading-relaxed">
               {t('common.tagline')}
             </p>
