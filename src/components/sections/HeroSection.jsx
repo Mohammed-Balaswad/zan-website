@@ -8,7 +8,7 @@ export function HeroSection() {
   const { language, t, isRTL } = useLanguage();
 
   return (
-    <section className="relative w-full min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-navy-dark pt-24 pb-16 lg:pt-32 lg:pb-24">
+    <section className="relative w-full h-[100dvh] lg:h-screen flex items-center justify-center overflow-hidden overflow-x-hidden bg-navy-dark pt-20 pb-12 lg:pt-32 lg:pb-24">
       {/* Background Image with Cinematic Refined Scrim */}
       <div className="absolute inset-0 z-0">
         <img

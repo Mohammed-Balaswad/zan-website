@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from '../../context/LanguageContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { ScrollToTop } from '../ui/ScrollToTop'; 
+import { ScrollToTop } from '../ui/ScrollToTop';
 
 function LayoutContent() {
   const location = useLocation();
   const { language } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, [location.pathname]);
 
   const isHomePage =
     location.pathname === '/' ||

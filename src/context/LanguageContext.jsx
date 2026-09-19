@@ -33,7 +33,7 @@ export function LanguageProvider({ children }) {
       pathParts.unshift(newLang);
     }
     
-    const newPath = '/' + pathParts.join('') + location.search + location.hash;
+    const newPath = '/' + pathParts.join('/') + location.search + location.hash;
     navigate(newPath);
   };
 
