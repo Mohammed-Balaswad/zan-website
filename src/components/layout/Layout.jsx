@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from '../../context/LanguageContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { ScrollToTop } from '../ui/ScrollToTop'; 
 
 function LayoutContent() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function LayoutContent() {
         <Outlet />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
