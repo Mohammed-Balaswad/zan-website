@@ -35,15 +35,47 @@
       "secondaryCta": "About ZAN"
     },
     "positioning": {
-      "eyebrow": "About ZAN",
-      "title": "Empowering High-Value Projects & Sustainable Investment",
-      "paragraph1": "ZAN Global Investments was established as a Saudi investment firm dedicated to identifying, structuring, and developing high-impact investment opportunities.",
-      "paragraph2": "We operate through an integrated ecosystem spanning project development, management, strategic alignment, and operational solutions to deliver sustainable economic value.",
-      "stat1Title": "Strategic Sectors",
-      "stat1Desc": "Active across Hospitality, Logistics, and Real Estate",
-      "stat2Title": "Integrated Ecosystem",
-      "stat2Desc": "Development, Management, and Investment Structuring"
+  "eyebrow": "About ZAN",
+  "title": "Transforming Investment Opportunities into Actionable, Growing Projects",
+  "paragraph1": "ZAN helps companies and investors enter the Saudi market and turn investment ideas into clear, executable projects.",
+  "paragraph2": "We combine market intelligence, planning, operations, and project development to build practical solutions that drive growth and sustainability.",
+  "statementLabel": "Your Partner in the Saudi Market",
+  "statement": "From the initial idea to operation and development, we accompany the project through every stage of building and growth.",
+  "journeyIntro": "Discover How We Work",
+  "imageAlt": "Modern architectural project reflecting investment and development environment",
+  "imageLabel": "Investment & Development",
+  "journeyEyebrow": "From Idea to Growth",
+  "journeyTitle": "An Integrated Journey for Project Building & Development",
+  "journeyDescription": "We turn opportunities into a clear path starting from project establishment and market intelligence, extending to operation, development, and expansion.",
+  "journeyBottom": "From Establishment to Expansion — A unified ecosystem to support the project in its growth stages.",
+  "tagline": "Your Partner in the Saudi Market",
+  "journey": {
+    "establishment": {
+      "title": "Establishment",
+      "description": "Preparing the project for market entry and building its regulatory foundation."
     },
+    "market": {
+      "title": "Market Study",
+      "description": "Understanding the market, competition, customers, and associated opportunities."
+    },
+    "feasibility": {
+      "title": "Feasibility Study",
+      "description": "Analyzing financial and operational feasibility and evaluating project viability."
+    },
+    "businessPlan": {
+      "title": "Business Plan",
+      "description": "Building the operational model, structure, and required procedures."
+    },
+    "operation": {
+      "title": "Operation",
+      "description": "Turning the plan into an actual project operating with efficiency and quality."
+    },
+    "development": {
+      "title": "Development & Expansion",
+      "description": "Improving performance, developing the project, and building future growth opportunities."
+    }
+  }
+},
     "projects": {
       "eyebrow": "Projects & Portfolio",
       "title": "High-Impact Investments Driving Economic Growth",
