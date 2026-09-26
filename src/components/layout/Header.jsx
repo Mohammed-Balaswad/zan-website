@@ -3,6 +3,11 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { LanguageSwitcher } from '../navigation/LanguageSwitcher';
 import { Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
+import {
+  FEATURE_FLAGS,
+  hasVisibleInvestmentLinks,
+  hasVisiblePartnershipLinks,
+} from '../../config/features';
 
 export function Header() {
   const { language, t } = useLanguage();
@@ -82,8 +87,14 @@ export function Header() {
   // Check active state helper for dropdown parents
   const isPathActive = (paths) => paths.some((path) => location.pathname === path);
 
-  const investmentPaths = [`/${language}/projects`, `/${language}/opportunities`];
-  const partnershipsPaths = [`/${language}/partners`, `/${language}/partnerships`];
+  const investmentPaths = [
+    ...(FEATURE_FLAGS.nav.investmentProjects ? [`/${language}/projects`] : []),
+    ...(FEATURE_FLAGS.nav.investmentOpportunities ? [`/${language}/opportunities`] : []),
+  ];
+  const partnershipsPaths = [
+    ...(FEATURE_FLAGS.nav.strategicPartners ? [`/${language}/partners`] : []),
+    ...(FEATURE_FLAGS.nav.investorsPartnerships ? [`/${language}/partnerships`] : []),
+  ];
 
   return (
     <header
@@ -157,144 +168,156 @@ export function Header() {
           </NavLink>
 
           {/* 3. Investment Dropdown (Click Interaction) */}
-          <div className="relative" ref={investmentRef}>
-            <button
-              type="button"
-              onClick={() => {
-                setInvestmentOpen(!investmentOpen);
-                setPartnershipsOpen(false);
-              }}
-              className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isPathActive(investmentPaths)
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
-              }`}
-              aria-expanded={investmentOpen}
-              aria-haspopup="true"
-              aria-label={t('nav.investment')}
-            >
-              <span>{t('nav.investment')}</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${investmentOpen ? 'rotate-180 text-gold' : ''}`} />
-            </button>
-
-            {investmentOpen && (
-              <div
-                className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[200px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
-                  isTransparent
-                    ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
-                    : 'bg-white border-border text-navy'
+          {hasVisibleInvestmentLinks && (
+            <div className="relative" ref={investmentRef}>
+              <button
+                type="button"
+                onClick={() => {
+                  setInvestmentOpen(!investmentOpen);
+                  setPartnershipsOpen(false);
+                }}
+                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
+                  isPathActive(investmentPaths)
+                    ? isTransparent
+                      ? 'text-white font-bold border-gold'
+                      : 'text-navy font-bold border-gold'
+                    : isTransparent
+                      ? 'text-white/90 border-transparent hover:border-gold/50'
+                      : 'text-text-dark/80 border-transparent hover:border-gold/50'
                 }`}
-                role="menu"
+                aria-expanded={investmentOpen}
+                aria-haspopup="true"
+                aria-label={t('nav.investment')}
               >
-                <NavLink
-                  to={`/${language}/projects`}
-                  onClick={() => setInvestmentOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                      isActive
-                        ? 'border-gold text-gold bg-gold/10'
-                        : isTransparent
-                          ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                          : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                    }`
-                  }
-                  role="menuitem"
+                <span>{t('nav.investment')}</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${investmentOpen ? 'rotate-180 text-gold' : ''}`} />
+              </button>
+
+              {investmentOpen && (
+                <div
+                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[200px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
+                    isTransparent
+                      ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
+                      : 'bg-white border-border text-navy'
+                  }`}
+                  role="menu"
                 >
-                  {t('nav.projects')}
-                </NavLink>
-                <NavLink
-                  to={`/${language}/opportunities`}
-                  onClick={() => setInvestmentOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                      isActive
-                        ? 'border-gold text-gold bg-gold/10'
-                        : isTransparent
-                          ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                          : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                    }`
-                  }
-                  role="menuitem"
-                >
-                  {t('nav.opportunities')}
-                </NavLink>
-              </div>
-            )}
-          </div>
+                  {FEATURE_FLAGS.nav.investmentProjects && (
+                    <NavLink
+                      to={`/${language}/projects`}
+                      onClick={() => setInvestmentOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                          isActive
+                            ? 'border-gold text-gold bg-gold/10'
+                            : isTransparent
+                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        }`
+                      }
+                      role="menuitem"
+                    >
+                      {t('nav.projects')}
+                    </NavLink>
+                  )}
+                  {FEATURE_FLAGS.nav.investmentOpportunities && (
+                    <NavLink
+                      to={`/${language}/opportunities`}
+                      onClick={() => setInvestmentOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                          isActive
+                            ? 'border-gold text-gold bg-gold/10'
+                            : isTransparent
+                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        }`
+                      }
+                      role="menuitem"
+                    >
+                      {t('nav.opportunities')}
+                    </NavLink>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* 4. Partnerships Dropdown (Click Interaction) */}
-          <div className="relative" ref={partnershipsRef}>
-            <button
-              type="button"
-              onClick={() => {
-                setPartnershipsOpen(!partnershipsOpen);
-                setInvestmentOpen(false);
-              }}
-              className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isPathActive(partnershipsPaths)
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
-              }`}
-              aria-expanded={partnershipsOpen}
-              aria-haspopup="true"
-              aria-label={t('nav.partnershipsMenu')}
-            >
-              <span>{t('nav.partnershipsMenu')}</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${partnershipsOpen ? 'rotate-180 text-gold' : ''}`} />
-            </button>
-
-            {partnershipsOpen && (
-              <div
-                className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[210px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
-                  isTransparent
-                    ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
-                    : 'bg-white border-border text-navy'
+          {hasVisiblePartnershipLinks && (
+            <div className="relative" ref={partnershipsRef}>
+              <button
+                type="button"
+                onClick={() => {
+                  setPartnershipsOpen(!partnershipsOpen);
+                  setInvestmentOpen(false);
+                }}
+                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
+                  isPathActive(partnershipsPaths)
+                    ? isTransparent
+                      ? 'text-white font-bold border-gold'
+                      : 'text-navy font-bold border-gold'
+                    : isTransparent
+                      ? 'text-white/90 border-transparent hover:border-gold/50'
+                      : 'text-text-dark/80 border-transparent hover:border-gold/50'
                 }`}
-                role="menu"
+                aria-expanded={partnershipsOpen}
+                aria-haspopup="true"
+                aria-label={t('nav.partnershipsMenu')}
               >
-                <NavLink
-                  to={`/${language}/partners`}
-                  onClick={() => setPartnershipsOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                      isActive
-                        ? 'border-gold text-gold bg-gold/10'
-                        : isTransparent
-                          ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                          : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                    }`
-                  }
-                  role="menuitem"
+                <span>{t('nav.partnershipsMenu')}</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${partnershipsOpen ? 'rotate-180 text-gold' : ''}`} />
+              </button>
+
+              {partnershipsOpen && (
+                <div
+                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[210px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
+                    isTransparent
+                      ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
+                      : 'bg-white border-border text-navy'
+                  }`}
+                  role="menu"
                 >
-                  {t('nav.partners')}
-                </NavLink>
-                <NavLink
-                  to={`/${language}/partnerships`}
-                  onClick={() => setPartnershipsOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                      isActive
-                        ? 'border-gold text-gold bg-gold/10'
-                        : isTransparent
-                          ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                          : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                    }`
-                  }
-                  role="menuitem"
-                >
-                  {t('nav.partnerships')}
-                </NavLink>
-              </div>
-            )}
-          </div>
+                  {FEATURE_FLAGS.nav.strategicPartners && (
+                    <NavLink
+                      to={`/${language}/partners`}
+                      onClick={() => setPartnershipsOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                          isActive
+                            ? 'border-gold text-gold bg-gold/10'
+                            : isTransparent
+                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        }`
+                      }
+                      role="menuitem"
+                    >
+                      {t('nav.partners')}
+                    </NavLink>
+                  )}
+                  {FEATURE_FLAGS.nav.investorsPartnerships && (
+                    <NavLink
+                      to={`/${language}/partnerships`}
+                      onClick={() => setPartnershipsOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                          isActive
+                            ? 'border-gold text-gold bg-gold/10'
+                            : isTransparent
+                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        }`
+                      }
+                      role="menuitem"
+                    >
+                      {t('nav.partnerships')}
+                    </NavLink>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* 5. Services */}
           <NavLink
@@ -403,66 +426,78 @@ export function Header() {
             </NavLink>
 
             {/* 3. Investment Group */}
-            <div className="py-2 border-b border-white/10">
-              <div className="text-xs uppercase tracking-wider text-gold font-bold mb-2">
-                {t('nav.investment')}
+            {hasVisibleInvestmentLinks && (
+              <div className="py-2 border-b border-white/10">
+                <div className="text-xs uppercase tracking-wider text-gold font-bold mb-2">
+                  {t('nav.investment')}
+                </div>
+                <div className="ltr:pl-3 rtl:pr-3 flex flex-col space-y-2">
+                  {FEATURE_FLAGS.nav.investmentProjects && (
+                    <NavLink
+                      to={`/${language}/projects`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `text-xs font-semibold py-1.5 ${
+                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        }`
+                      }
+                    >
+                      {t('nav.projects')}
+                    </NavLink>
+                  )}
+                  {FEATURE_FLAGS.nav.investmentOpportunities && (
+                    <NavLink
+                      to={`/${language}/opportunities`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `text-xs font-semibold py-1.5 ${
+                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        }`
+                      }
+                    >
+                      {t('nav.opportunities')}
+                    </NavLink>
+                  )}
+                </div>
               </div>
-              <div className="ltr:pl-3 rtl:pr-3 flex flex-col space-y-2">
-                <NavLink
-                  to={`/${language}/projects`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `text-xs font-semibold py-1.5 ${
-                      isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                    }`
-                  }
-                >
-                  {t('nav.projects')}
-                </NavLink>
-                <NavLink
-                  to={`/${language}/opportunities`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `text-xs font-semibold py-1.5 ${
-                      isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                    }`
-                  }
-                >
-                  {t('nav.opportunities')}
-                </NavLink>
-              </div>
-            </div>
+            )}
 
             {/* 4. Partnerships Group */}
-            <div className="py-2 border-b border-white/10">
-              <div className="text-xs uppercase tracking-wider text-gold font-bold mb-2">
-                {t('nav.partnershipsMenu')}
+            {hasVisiblePartnershipLinks && (
+              <div className="py-2 border-b border-white/10">
+                <div className="text-xs uppercase tracking-wider text-gold font-bold mb-2">
+                  {t('nav.partnershipsMenu')}
+                </div>
+                <div className="ltr:pl-3 rtl:pr-3 flex flex-col space-y-2">
+                  {FEATURE_FLAGS.nav.strategicPartners && (
+                    <NavLink
+                      to={`/${language}/partners`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `text-xs font-semibold py-1.5 ${
+                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        }`
+                      }
+                    >
+                      {t('nav.partners')}
+                    </NavLink>
+                  )}
+                  {FEATURE_FLAGS.nav.investorsPartnerships && (
+                    <NavLink
+                      to={`/${language}/partnerships`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `text-xs font-semibold py-1.5 ${
+                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        }`
+                      }
+                    >
+                      {t('nav.partnerships')}
+                    </NavLink>
+                  )}
+                </div>
               </div>
-              <div className="ltr:pl-3 rtl:pr-3 flex flex-col space-y-2">
-                <NavLink
-                  to={`/${language}/partners`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `text-xs font-semibold py-1.5 ${
-                      isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                    }`
-                  }
-                >
-                  {t('nav.partners')}
-                </NavLink>
-                <NavLink
-                  to={`/${language}/partnerships`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `text-xs font-semibold py-1.5 ${
-                      isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                    }`
-                  }
-                >
-                  {t('nav.partnerships')}
-                </NavLink>
-              </div>
-            </div>
+            )}
 
             {/* 5. Services */}
             <NavLink
