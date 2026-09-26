@@ -6,6 +6,7 @@ import { OpportunitiesSection } from '../../components/sections/OpportunitiesSec
 import { SectorsSection } from '../../components/sections/SectorsSection';
 import { PartnersSection } from '../../components/sections/PartnersSection';
 import { HomeCtaSection } from '../../components/sections/HomeCtaSection';
+import { FEATURE_FLAGS } from '../../config/features';
 
 export function HomePage() {
   return (
@@ -17,13 +18,13 @@ export function HomePage() {
       <PositioningSection />
 
       {/* 3. Featured Investment & Project Showcase (Editorial Layout) */}
-      <ProjectShowcaseSection />
+      {FEATURE_FLAGS.homeSections.projectShowcase && <ProjectShowcaseSection />}
 
       {/* 4. Target Investment Opportunities (Dark Navy High-Contrast Section) */}
-      <OpportunitiesSection />
+      {FEATURE_FLAGS.homeSections.opportunities && <OpportunitiesSection />}
 
       {/* 5. Core Sectors Display */}
-      <SectorsSection />
+      {FEATURE_FLAGS.homeSections.sectors && <SectorsSection />}
 
       {/* 6. Strategic Partners (Neutral Placeholders) */}
       <PartnersSection />
