@@ -167,5 +167,124 @@
       "messageRequired": "Request details are required",
       "consentRequired": "Consent is required to proceed"
     }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "About ZAN",
+      "title": "Developing Investment Opportunities into Scalable, Value-Driven Projects",
+      "subtitle": "A Saudi investment and operations company connecting capital with high-potential enterprise opportunities through an integrated model uniting investment, management, operations, and continuous development."
+    },
+    "whoWeAre": {
+      "eyebrow": "Who We Are",
+      "title": "From Opportunity to Enterprise — Your Strategic Partner in Saudi Arabia",
+      "paragraph1": "ZAN was established as a Saudi investment and operations company dedicated to transforming high-potential ideas and opportunities into tangible enterprises structured for resilience, scalability, and long-term value.",
+      "paragraph2": "We empower institutional investors and forward-thinking enterprises seeking to enter or expand within the Saudi market, deploying a disciplined methodology that aligns rigorous market intelligence, strategic planning, and hands-on operational capability.",
+      "paragraph3": "We go beyond capital deployment and theoretical blueprints; we actively steward every phase of execution to ensure real-world operational excellence and lasting financial performance for our partners.",
+      "imageBadgeLabel": "Kingdom of Saudi Arabia",
+      "imageBadgeTitle": "Investment & Development Ecosystem",
+      "pillars": {
+        "market": {
+          "title": "Saudi Market Expertise",
+          "desc": "Deep institutional understanding of local market drivers and regulatory frameworks."
+        },
+        "operations": {
+          "title": "Operational Governance",
+          "desc": "Active executive oversight transforming plans into measurable real-world outcomes."
+        },
+        "value": {
+          "title": "Sustainable Value",
+          "desc": "Building resilient enterprises engineered for scalable and enduring returns."
+        }
+      }
+    },
+    "model": {
+      "eyebrow": "Integrated Operating Ecosystem",
+      "title": "Three Interconnected Dimensions Driving Sustainable Value",
+      "subtitle": "Our core disciplines operate in synergy, ensuring a seamless continuum from opportunity structuring to active operation and continuous expansion.",
+      "dimensions": {
+        "investment": {
+          "number": "01",
+          "title": "Investment",
+          "role": "Opportunity Structuring & Allocation",
+          "desc": "Identifying, evaluating, and structuring high-potential investment opportunities in strategic sectors, aligned with institutional risk-return profiles."
+        },
+        "operations": {
+          "number": "02",
+          "title": "Operations",
+          "role": "Flawless Execution & Governance",
+          "desc": "Transforming business plans into functioning, efficient operations through disciplined management, modern governance, and rigorous quality standards."
+        },
+        "development": {
+          "number": "03",
+          "title": "Project Development",
+          "role": "Continuous Optimization & Scale",
+          "desc": "Driving performance enhancement, operational optimization, and strategic market expansion to maximize long-term enterprise value."
+        }
+      },
+      "synthesis": {
+        "title": "Unified Synergy",
+        "desc": "The seamless convergence of investment discipline, operational rigor, and continuous development powers enduring project success."
+      }
+    },
+    "visionMission": {
+      "eyebrow": "Strategic Principles",
+      "vision": {
+        "label": "Our Vision",
+        "title": "To be the trusted investment partner in building and developing enterprise projects that generate enduring, sustainable value in the Saudi market.",
+        "supporting": "We aspire to be the premier destination where strategic foresight converges with operational strength, fostering prosperity and supporting the Kingdom's economic transformation."
+      },
+      "mission": {
+        "label": "Our Mission",
+        "title": "To provide innovative investment and operational solutions that empower partner growth and ensure long-term business sustainability.",
+        "supporting": "We are dedicated to building and managing high-viability projects through disciplined opportunity selection, professional governance, and enduring strategic alliances."
+      }
+    },
+    "approach": {
+      "eyebrow": "Operational Methodology",
+      "title": "A Structured Journey from Inception to Scalable Expansion",
+      "subtitle": "We adhere to a proven phased trajectory, ensuring precision, compliance, and excellence at every milestone of project building.",
+      "steps": {
+        "establishment": {
+          "number": "01",
+          "title": "Establishment",
+          "desc": "Structuring regulatory compliance, governance, and institutional foundations for market readiness."
+        },
+        "market": {
+          "number": "02",
+          "title": "Market Intelligence",
+          "desc": "Rigorous market research, competitive benchmarking, and demand assessment to pinpoint competitive edge."
+        },
+        "feasibility": {
+          "number": "03",
+          "title": "Feasibility Study",
+          "desc": "Comprehensive financial and operational modeling, risk assessments, and viability validation."
+        },
+        "businessPlan": {
+          "number": "04",
+          "title": "Business & Operating Plan",
+          "desc": "Architecting operating models, organizational workflows, and milestone-driven execution roadmaps."
+        },
+        "preparation": {
+          "number": "05",
+          "title": "Preparation & Setup",
+          "desc": "Managing procurement, infrastructure deployment, technical setups, and pre-launch operational readiness."
+        },
+        "operation": {
+          "number": "06",
+          "title": "Operations & Governance",
+          "desc": "Activating commercial operations, institutional governance, ongoing quality assurance, and KPI tracking."
+        },
+        "development": {
+          "number": "07",
+          "title": "Development & Expansion",
+          "desc": "Driving performance optimization, efficiency gains, and exploring strategic geographic and sectoral scaling."
+        }
+      }
+    },
+    "cta": {
+      "title": "Do you have an opportunity or project seeking a strategic development partner?",
+      "subtitle": "We welcome dialogue with investors, enterprise leaders, and project owners to explore collaborative avenues and build high-impact ventures across Saudi Arabia.",
+      "button": "Connect With ZAN"
+    }
   }
 }

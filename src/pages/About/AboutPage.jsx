@@ -1,19 +1,31 @@
 import React from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+import { AboutHero } from './components/AboutHero';
+import { AboutWhoWeAre } from './components/AboutWhoWeAre';
+import { AboutModel } from './components/AboutModel';
+import { AboutVisionMission } from './components/AboutVisionMission';
+import { AboutApproach } from './components/AboutApproach';
+import { AboutCta } from './components/AboutCta';
 
 export function AboutPage() {
-  const { t } = useLanguage();
-
   return (
-    <div className="max-w-container mx-auto px-4 md:px-8 py-12">
-      <div className="bg-white rounded-card p-8 border border-border">
-        <h1 className="text-2xl font-bold text-navy mb-4">
-          {t('nav.about')}
-        </h1>
-        <p className="text-sm text-text-muted leading-relaxed">
-          {t('common.companyName')} — {t('common.tagline')}
-        </p>
-      </div>
+    <div className="w-full">
+      {/* 1. Institutional Hero */}
+      <AboutHero />
+
+      {/* 2. Who We Are (Asymmetric Editorial Section) */}
+      <AboutWhoWeAre />
+
+      {/* 3. Integrated Operating Model (Investment → Operations → Project Development) */}
+      <AboutModel />
+
+      {/* 4. Strategic Vision & Mission */}
+      <AboutVisionMission />
+
+      {/* 5. Our Approach / Operational Journey Timeline */}
+      <AboutApproach />
+
+      {/* 6. Closing Institutional Call to Action */}
+      <AboutCta />
     </div>
   );
 }
