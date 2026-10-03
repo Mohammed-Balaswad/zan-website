@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../../context/LanguageContext';
-import { Briefcase, Cog, TrendingUp, ArrowRight, ArrowDown } from 'lucide-react';
+import { BriefcaseBusiness, Settings2, TrendingUp } from 'lucide-react';
 
 export function AboutModel() {
   const { t, isRTL } = useLanguage();
@@ -10,151 +10,171 @@ export function AboutModel() {
     {
       num: t('aboutPage.model.dimensions.investment.number'),
       title: t('aboutPage.model.dimensions.investment.title'),
-      role: t('aboutPage.model.dimensions.investment.role'),
       desc: t('aboutPage.model.dimensions.investment.desc'),
-      icon: Briefcase,
+      icon: BriefcaseBusiness,
     },
     {
       num: t('aboutPage.model.dimensions.operations.number'),
       title: t('aboutPage.model.dimensions.operations.title'),
-      role: t('aboutPage.model.dimensions.operations.role'),
       desc: t('aboutPage.model.dimensions.operations.desc'),
-      icon: Cog,
+      icon: Settings2,
     },
     {
       num: t('aboutPage.model.dimensions.development.number'),
       title: t('aboutPage.model.dimensions.development.title'),
-      role: t('aboutPage.model.dimensions.development.role'),
       desc: t('aboutPage.model.dimensions.development.desc'),
       icon: TrendingUp,
     },
   ];
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-navy text-white relative overflow-hidden border-b border-white/10">
-      {/* Background Architectural Accent Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-5 bg-[radial-gradient(#C6A15B_1px,transparent_1px)] [background-size:24px_24px]" />
+    <section className="relative overflow-hidden bg-navy py-16 md:py-22 lg:py-26 text-white">
+      {/* Subtle architectural grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+        }}
+      />
 
-      <div className="max-w-container mx-auto px-4 md:px-8 relative z-10">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-4">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/40 text-gold"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-widest">
+      <div className="relative z-10 mx-auto max-w-container px-4 md:px-8">
+
+        {/* =========================================================
+            HEADER
+        ========================================================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-70px' }}
+          transition={{ duration: 0.65, ease: 'easeOut' }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          <div className="mb-5 inline-flex items-center gap-3">
+            <span className="h-px w-9 bg-gold" />
+
+            <span className="text-[11px] font-bold tracking-[0.2em] text-gold">
               {t('aboutPage.model.eyebrow')}
             </span>
-          </motion.div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight"
-          >
+            <span className="h-px w-9 bg-gold" />
+          </div>
+
+          {/* Main heading */}
+          <h2 className="text-2xl font-extrabold leading-snug tracking-tight text-white sm:text-3xl md:text-4xl">
             {t('aboutPage.model.title')}
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-white/75 leading-relaxed font-normal"
-          >
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-[1.9] text-white/65 sm:text-base">
             {t('aboutPage.model.subtitle')}
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
-        {/* Integrated 3-Dimension Pipeline */}
-        <div className="relative">
-          {/* Desktop Connecting Track Line */}
-          <div
-            aria-hidden="true"
-            className="hidden lg:block absolute top-[72px] inset-x-12 h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20 z-0 opacity-40"
-          />
+        {/* =========================================================
+            INTEGRATED MODEL
+        ========================================================= */}
+        <div dir={isRTL ? 'rtl' : 'ltr'} className="relative mt-12 md:mt-16">
+          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch relative">
+            {dimensions.map((item, index) => {
+              const Icon = item.icon;
+              const isNotLast = index < dimensions.length - 1;
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
-            {dimensions.map((item, idx) => {
-              const IconComp = item.icon;
               return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.15 }}
-                  className="relative rounded-card p-6 sm:p-8 bg-navy-dark/80 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-300 group shadow-subtle flex flex-col justify-between"
-                >
-                  {/* Top Bar with Number & Icon */}
-                  <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="text-2xl sm:text-3xl font-extrabold font-mono text-gold tracking-tight">
-                        {item.num}
-                      </span>
-                      <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-gold flex items-center justify-center group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
-                        <IconComp className="w-6 h-6 transition-transform group-hover:scale-110" />
+                <div key={item.num} className="relative flex items-center">
+                  <motion.article
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.1,
+                      ease: 'easeOut',
+                    }}
+                    className="group relative flex flex-col justify-between w-full h-full p-5 md:p-6 rounded-xl bg-white/[0.02] border border-white/10 hover:border-gold/40 transition-all duration-300 z-10"
+                  >
+                    <div className="w-full">
+                      
+                      {/* الحاوية الأولى: الأيقونة والرقم */}
+                      <div className="mb-4 flex items-center justify-between">
+                        <span className="font-mono text-2xl font-semibold tracking-tight text-gold/90 sm:text-3xl">
+                          {item.num}
+                        </span>
+
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-navy text-gold transition-all duration-300 group-hover:border-gold/50 group-hover:bg-gold group-hover:text-navy shadow-md">
+                          <Icon className="h-4 w-4" />
+                        </div>
+                      </div>
+
+                      {/* الحاوية الثانية: العنوان الرئيسي والوصف */}
+                      <div className={`relative ${isRTL ? 'text-right' : 'text-left'}`}>
+                        <h3 className="text-lg font-bold tracking-tight text-white sm:text-xl">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-3 text-xs leading-[1.8] text-white/60 sm:text-sm">
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
+                  </motion.article>
 
-                    {/* Role Pill */}
-                    <span className="inline-block px-2.5 py-1 rounded bg-white/5 text-[10px] sm:text-[11px] font-semibold text-gold mb-3 border border-gold/25">
-                      {item.role}
-                    </span>
-
-                    {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                      {item.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-normal">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  {/* Flow indicator for mobile */}
-                  {idx < 2 && (
-                    <div className="lg:hidden flex justify-center pt-4 text-gold/60">
-                      <ArrowDown className="w-5 h-5 animate-pulse" />
-                    </div>
+                  {/* خط فاصل بين البطاقات للشاشات الكبيرة */}
+                  {isNotLast && (
+                    <div 
+                      aria-hidden="true" 
+                      className={`hidden lg:block absolute top-1/2 -translate-y-1/2 w-6 h-[2px] bg-gold/40 z-0 ${
+                        isRTL ? '-left-6' : '-right-6'
+                      }`} 
+                    />
                   )}
-                </motion.div>
+                </div>
               );
             })}
           </div>
         </div>
 
-        {/* Synergy Synthesis Outcome Banner */}
+        {/* =========================================================
+            SYNTHESIS / CLOSING STATEMENT
+        ========================================================= */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 p-6 sm:p-8 rounded-card bg-gradient-to-r from-navy-dark via-navy-light/40 to-navy-dark border border-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.65, delay: 0.12 }}
+          className="relative mx-auto mt-14 max-w-6xl overflow-hidden border border-gold/25 bg-white/[0.035] md:mt-18 rounded-xl"
         >
-          <div className="space-y-1 text-center md:text-start">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold block">
-              {t('aboutPage.model.synthesis.title')}
-            </span>
-            <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
-              {t('aboutPage.model.synthesis.desc')}
-            </p>
-          </div>
+          {/* Accent line */}
+          <div
+            aria-hidden="true"
+            className={`absolute top-0 h-[2px] w-36 bg-gold ${
+              isRTL ? 'right-0' : 'left-0'
+            }`}
+          />
 
-          <div className="flex-shrink-0 px-5 py-2.5 rounded-btn bg-gold text-navy-dark font-extrabold text-xs sm:text-sm tracking-wide shadow-subtle flex items-center gap-2">
-            <span>{isRTL ? 'النمو والتوسع المستدام' : 'Sustainable Growth & Scale'}</span>
-            <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+          <div
+            className={`flex flex-col gap-6 px-6 py-7 sm:px-8 md:px-10 lg:flex-row lg:items-center lg:justify-between ${
+              isRTL ? 'lg:text-right' : 'lg:text-left'
+            }`}
+          >
+            <div>
+              <h4 className="text-xs md:text-sm font-bold tracking-[0.15em] text-gold">
+                {t('aboutPage.model.synthesis.title')}
+              </h4>
+
+              <p className="mt-3 max-w-3xl text-xs md:text-sm leading-[1.9] text-white/75">
+                {t('aboutPage.model.synthesis.desc')}
+              </p>
+            </div>
+
+            <div className="flex shrink-0 items-center gap-3">
+              <span className="h-px w-10 bg-gold/50" />
+
+              <span className="h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_0_4px_rgba(198,161,91,0.10)]" />
+            </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

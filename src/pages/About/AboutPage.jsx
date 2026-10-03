@@ -3,7 +3,7 @@ import { AboutHero } from './components/AboutHero';
 import { AboutWhoWeAre } from './components/AboutWhoWeAre';
 import { AboutModel } from './components/AboutModel';
 import { AboutVisionMission } from './components/AboutVisionMission';
-import { AboutApproach } from './components/AboutApproach';
+import { AboutSectors } from './components/AboutSectors';
 import { AboutCta } from './components/AboutCta';
 
 export function AboutPage() {
@@ -22,7 +22,7 @@ export function AboutPage() {
       <AboutVisionMission />
 
       {/* 5. Our Approach / Operational Journey Timeline */}
-      <AboutApproach />
+      <AboutSectors />
 
       {/* 6. Closing Institutional Call to Action */}
       <AboutCta />
