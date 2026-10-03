@@ -22,12 +22,19 @@ export function Header() {
   const investmentRef = useRef(null);
   const partnershipsRef = useRef(null);
 
-  const isHomePage =
-    location.pathname === '/' ||
-    location.pathname === `/${language}` ||
-    location.pathname === `/${language}/`;
+  // التحقق من المسارات التي تتطلب نافبار شفافة في أعلى الصفحة
+  const transparentPaths = [
+    '/',
+    `/${language}`,
+    `/${language}/`,
+    `/${language}/about`,
+    `/${language}/about/`,
+  ];
 
-  const isTransparent = isHomePage && !isScrolled;
+  const isTransparentPage = transparentPaths.includes(location.pathname);
+  const isTransparent = isTransparentPage && !isScrolled;
+
+
 
   // Responsive breakpoint helpers for Russian vs Arabic/English
   const isRussian = language === 'ru';
@@ -98,11 +105,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 ${
-        isTransparent
-          ? 'bg-gradient-to-b from-navy-dark/80 via-navy-dark/40 to-transparent text-white border-b border-white/10'
-          : 'bg-white/95 backdrop-blur-md border-b border-border/80 shadow-subtle text-navy'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 ${isTransparent
+  ? 'bg-transparent text-white border-b border-white/10'
+  : 'bg-white/95 backdrop-blur-md border-b border-border/80 shadow-subtle text-navy'
+        }`}
     >
       <div className="max-w-container mx-auto px-4 md:px-8 h-full flex items-center justify-between">
         {/* ================= AREA 1: LOGO AREA ================= */}
@@ -121,9 +127,8 @@ export function Header() {
             <img
               src="/images/ZAN-LOGO-2.svg"
               alt="ZAN Global Investments Logo"
-              className={`h-9 sm:h-10 md:h-11 w-auto max-w-[160px] sm:max-w-[180px] xl:max-w-[200px] object-contain transition-all duration-300 ${
-                isTransparent ? 'brightness-0 invert drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' : ''
-              } group-hover:scale-[1.02]`}
+              className={`h-9 sm:h-10 md:h-11 w-auto max-w-[160px] sm:max-w-[180px] xl:max-w-[200px] object-contain transition-all duration-300 ${isTransparent ? 'brightness-0 invert drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' : ''
+                } group-hover:scale-[1.02]`}
             />
           </Link>
         </div>
@@ -135,14 +140,13 @@ export function Header() {
             to={`/${language}`}
             end
             className={({ isActive }) =>
-              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isActive
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
+              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isActive
+                ? isTransparent
+                  ? 'text-white font-bold border-gold'
+                  : 'text-navy font-bold border-gold'
+                : isTransparent
+                  ? 'text-white/90 border-transparent hover:border-gold/50'
+                  : 'text-text-dark/80 border-transparent hover:border-gold/50'
               }`
             }
           >
@@ -153,14 +157,13 @@ export function Header() {
           <NavLink
             to={`/${language}/about`}
             className={({ isActive }) =>
-              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isActive
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
+              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isActive
+                ? isTransparent
+                  ? 'text-white font-bold border-gold'
+                  : 'text-navy font-bold border-gold'
+                : isTransparent
+                  ? 'text-white/90 border-transparent hover:border-gold/50'
+                  : 'text-text-dark/80 border-transparent hover:border-gold/50'
               }`
             }
           >
@@ -176,15 +179,14 @@ export function Header() {
                   setInvestmentOpen(!investmentOpen);
                   setPartnershipsOpen(false);
                 }}
-                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                  isPathActive(investmentPaths)
+                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isPathActive(investmentPaths)
                     ? isTransparent
                       ? 'text-white font-bold border-gold'
                       : 'text-navy font-bold border-gold'
                     : isTransparent
                       ? 'text-white/90 border-transparent hover:border-gold/50'
                       : 'text-text-dark/80 border-transparent hover:border-gold/50'
-                }`}
+                  }`}
                 aria-expanded={investmentOpen}
                 aria-haspopup="true"
                 aria-label={t('nav.investment')}
@@ -195,11 +197,10 @@ export function Header() {
 
               {investmentOpen && (
                 <div
-                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[200px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
-                    isTransparent
+                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[200px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${isTransparent
                       ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
                       : 'bg-white border-border text-navy'
-                  }`}
+                    }`}
                   role="menu"
                 >
                   {FEATURE_FLAGS.nav.investmentProjects && (
@@ -207,12 +208,11 @@ export function Header() {
                       to={`/${language}/projects`}
                       onClick={() => setInvestmentOpen(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                          isActive
-                            ? 'border-gold text-gold bg-gold/10'
-                            : isTransparent
-                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
+                          ? 'border-gold text-gold bg-gold/10'
+                          : isTransparent
+                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
                         }`
                       }
                       role="menuitem"
@@ -225,12 +225,11 @@ export function Header() {
                       to={`/${language}/opportunities`}
                       onClick={() => setInvestmentOpen(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                          isActive
-                            ? 'border-gold text-gold bg-gold/10'
-                            : isTransparent
-                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
+                          ? 'border-gold text-gold bg-gold/10'
+                          : isTransparent
+                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
                         }`
                       }
                       role="menuitem"
@@ -252,15 +251,14 @@ export function Header() {
                   setPartnershipsOpen(!partnershipsOpen);
                   setInvestmentOpen(false);
                 }}
-                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                  isPathActive(partnershipsPaths)
+                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isPathActive(partnershipsPaths)
                     ? isTransparent
                       ? 'text-white font-bold border-gold'
                       : 'text-navy font-bold border-gold'
                     : isTransparent
                       ? 'text-white/90 border-transparent hover:border-gold/50'
                       : 'text-text-dark/80 border-transparent hover:border-gold/50'
-                }`}
+                  }`}
                 aria-expanded={partnershipsOpen}
                 aria-haspopup="true"
                 aria-label={t('nav.partnershipsMenu')}
@@ -271,11 +269,10 @@ export function Header() {
 
               {partnershipsOpen && (
                 <div
-                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[210px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${
-                    isTransparent
+                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[210px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${isTransparent
                       ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
                       : 'bg-white border-border text-navy'
-                  }`}
+                    }`}
                   role="menu"
                 >
                   {FEATURE_FLAGS.nav.strategicPartners && (
@@ -283,12 +280,11 @@ export function Header() {
                       to={`/${language}/partners`}
                       onClick={() => setPartnershipsOpen(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                          isActive
-                            ? 'border-gold text-gold bg-gold/10'
-                            : isTransparent
-                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
+                          ? 'border-gold text-gold bg-gold/10'
+                          : isTransparent
+                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
                         }`
                       }
                       role="menuitem"
@@ -301,12 +297,11 @@ export function Header() {
                       to={`/${language}/partnerships`}
                       onClick={() => setPartnershipsOpen(false)}
                       className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                          isActive
-                            ? 'border-gold text-gold bg-gold/10'
-                            : isTransparent
-                              ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                              : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
+                          ? 'border-gold text-gold bg-gold/10'
+                          : isTransparent
+                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
+                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
                         }`
                       }
                       role="menuitem"
@@ -323,14 +318,13 @@ export function Header() {
           <NavLink
             to={`/${language}/services`}
             className={({ isActive }) =>
-              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isActive
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
+              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isActive
+                ? isTransparent
+                  ? 'text-white font-bold border-gold'
+                  : 'text-navy font-bold border-gold'
+                : isTransparent
+                  ? 'text-white/90 border-transparent hover:border-gold/50'
+                  : 'text-text-dark/80 border-transparent hover:border-gold/50'
               }`
             }
           >
@@ -341,14 +335,13 @@ export function Header() {
           <NavLink
             to={`/${language}/contact`}
             className={({ isActive }) =>
-              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${
-                isActive
-                  ? isTransparent
-                    ? 'text-white font-bold border-gold'
-                    : 'text-navy font-bold border-gold'
-                  : isTransparent
-                    ? 'text-white/90 border-transparent hover:border-gold/50'
-                    : 'text-text-dark/80 border-transparent hover:border-gold/50'
+              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isActive
+                ? isTransparent
+                  ? 'text-white font-bold border-gold'
+                  : 'text-navy font-bold border-gold'
+                : isTransparent
+                  ? 'text-white/90 border-transparent hover:border-gold/50'
+                  : 'text-text-dark/80 border-transparent hover:border-gold/50'
               }`
             }
           >
@@ -362,11 +355,10 @@ export function Header() {
 
           <Link
             to={`/${language}/contact`}
-            className={`px-3.5 xl:px-5 py-2 text-xs font-bold rounded-btn transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0 shadow-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-              isTransparent
+            className={`px-3.5 xl:px-5 py-2 text-xs font-bold rounded-btn transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap shrink-0 shadow-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isTransparent
                 ? 'bg-gold hover:bg-gold-dark text-navy-dark shadow-elevated'
                 : 'bg-navy hover:bg-navy-dark text-white'
-            }`}
+              }`}
           >
             <span>{t('common.investWithUs')}</span>
             <ArrowUpRight className={`w-3.5 h-3.5 rtl:rotate-90 ${isTransparent ? 'text-navy-dark' : 'text-gold'}`} />
@@ -379,11 +371,10 @@ export function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             type="button"
-            className={`p-2 rounded-btn transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-              isTransparent
+            className={`p-2 rounded-btn transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isTransparent
                 ? 'text-white hover:bg-white/10'
                 : 'text-navy hover:bg-surface-offwhite'
-            }`}
+              }`}
             aria-label="Toggle Menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -404,8 +395,7 @@ export function Header() {
               end
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `text-sm font-semibold py-2.5 border-b border-white/10 ${
-                  isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
+                `text-sm font-semibold py-2.5 border-b border-white/10 ${isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
                 }`
               }
             >
@@ -417,8 +407,7 @@ export function Header() {
               to={`/${language}/about`}
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `text-sm font-semibold py-2.5 border-b border-white/10 ${
-                  isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
+                `text-sm font-semibold py-2.5 border-b border-white/10 ${isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
                 }`
               }
             >
@@ -437,8 +426,7 @@ export function Header() {
                       to={`/${language}/projects`}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${
-                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
                         }`
                       }
                     >
@@ -450,8 +438,7 @@ export function Header() {
                       to={`/${language}/opportunities`}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${
-                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
                         }`
                       }
                     >
@@ -474,8 +461,7 @@ export function Header() {
                       to={`/${language}/partners`}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${
-                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
                         }`
                       }
                     >
@@ -487,8 +473,7 @@ export function Header() {
                       to={`/${language}/partnerships`}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${
-                          isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
+                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
                         }`
                       }
                     >
@@ -504,8 +489,7 @@ export function Header() {
               to={`/${language}/services`}
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `text-sm font-semibold py-2.5 border-b border-white/10 ${
-                  isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
+                `text-sm font-semibold py-2.5 border-b border-white/10 ${isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
                 }`
               }
             >
@@ -517,8 +501,7 @@ export function Header() {
               to={`/${language}/contact`}
               onClick={() => setMobileMenuOpen(false)}
               className={({ isActive }) =>
-                `text-sm font-semibold py-2.5 border-b border-white/10 ${
-                  isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
+                `text-sm font-semibold py-2.5 border-b border-white/10 ${isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
                 }`
               }
             >

@@ -35,47 +35,47 @@
       "secondaryCta": "About ZAN"
     },
     "positioning": {
-  "eyebrow": "About ZAN",
-  "title": "Transforming Investment Opportunities into Actionable, Growing Projects",
-  "paragraph1": "ZAN helps companies and investors enter the Saudi market and turn investment ideas into clear, executable projects.",
-  "paragraph2": "We combine market intelligence, planning, operations, and project development to build practical solutions that drive growth and sustainability.",
-  "statementLabel": "Your Partner in the Saudi Market",
-  "statement": "From the initial idea to operation and development, we accompany the project through every stage of building and growth.",
-  "journeyIntro": "Discover How We Work",
-  "imageAlt": "Modern architectural project reflecting investment and development environment",
-  "imageLabel": "Investment & Development",
-  "journeyEyebrow": "From Idea to Growth",
-  "journeyTitle": "An Integrated Journey for Project Building & Development",
-  "journeyDescription": "We turn opportunities into a clear path starting from project establishment and market intelligence, extending to operation, development, and expansion.",
-  "journeyBottom": "From Establishment to Expansion — A unified ecosystem to support the project in its growth stages.",
-  "tagline": "Your Partner in the Saudi Market",
-  "journey": {
-    "establishment": {
-      "title": "Establishment",
-      "description": "Preparing the project for market entry and building its regulatory foundation."
+      "eyebrow": "About ZAN",
+      "title": "Transforming Investment Opportunities into Actionable, Growing Projects",
+      "paragraph1": "ZAN helps companies and investors enter the Saudi market and turn investment ideas into clear, executable projects.",
+      "paragraph2": "We combine market intelligence, planning, operations, and project development to build practical solutions that drive growth and sustainability.",
+      "statementLabel": "Your Partner in the Saudi Market",
+      "statement": "From the initial idea to operation and development, we accompany the project through every stage of building and growth.",
+      "journeyIntro": "Discover How We Work",
+      "imageAlt": "Modern architectural project reflecting investment and development environment",
+      "imageLabel": "Investment & Development",
+      "journeyEyebrow": "From Idea to Growth",
+      "journeyTitle": "An Integrated Journey for Project Building & Development",
+      "journeyDescription": "We turn opportunities into a clear path starting from project establishment and market intelligence, extending to operation, development, and expansion.",
+      "journeyBottom": "From Establishment to Expansion — A unified ecosystem to support the project in its growth stages.",
+      "tagline": "Your Partner in the Saudi Market",
+      "journey": {
+        "establishment": {
+          "title": "Establishment",
+          "description": "Preparing the project for market entry and building its regulatory foundation."
+        },
+        "market": {
+          "title": "Market Study",
+          "description": "Understanding the market, competition, customers, and associated opportunities."
+        },
+        "feasibility": {
+          "title": "Feasibility Study",
+          "description": "Analyzing financial and operational feasibility and evaluating project viability."
+        },
+        "businessPlan": {
+          "title": "Business Plan",
+          "description": "Building the operational model, structure, and required procedures."
+        },
+        "operation": {
+          "title": "Operation",
+          "description": "Turning the plan into an actual project operating with efficiency and quality."
+        },
+        "development": {
+          "title": "Development & Expansion",
+          "description": "Improving performance, developing the project, and building future growth opportunities."
+        }
+      }
     },
-    "market": {
-      "title": "Market Study",
-      "description": "Understanding the market, competition, customers, and associated opportunities."
-    },
-    "feasibility": {
-      "title": "Feasibility Study",
-      "description": "Analyzing financial and operational feasibility and evaluating project viability."
-    },
-    "businessPlan": {
-      "title": "Business Plan",
-      "description": "Building the operational model, structure, and required procedures."
-    },
-    "operation": {
-      "title": "Operation",
-      "description": "Turning the plan into an actual project operating with efficiency and quality."
-    },
-    "development": {
-      "title": "Development & Expansion",
-      "description": "Improving performance, developing the project, and building future growth opportunities."
-    }
-  }
-},
     "projects": {
       "eyebrow": "Projects & Portfolio",
       "title": "High-Impact Investments Driving Economic Growth",
@@ -166,6 +166,124 @@
       "typeRequired": "Please select a request type",
       "messageRequired": "Request details are required",
       "consentRequired": "Consent is required to proceed"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "ABOUT ZAN",
+      "title": "Building Investment Opportunities and Developing Them into Scalable Ventures",
+      "subtitle": "A Saudi investment and operating company connecting capital with real operational opportunities through an integrated ecosystem combining investment, management, operations, and continuous development.",
+      "highlights": {
+        "marketLabel": "Market Stewardship",
+        "marketValue": "Saudi Market",
+        "focusLabel": "Core Focus",
+        "focusValue": "Integrated Model",
+        "objectiveLabel": "Long-Term Objective",
+        "objectiveValue": "Sustainable Value"
+      }
+    },
+    "whoWeAre": {
+      "eyebrow": "Who We Are",
+      "title": "Your Strategic Partner for Entering the Saudi Market",
+      "paragraph1": "ZAN Global Investments is a Saudi investment and operations company focused on developing investment opportunities and transforming them into executable, scalable businesses and projects through an integrated approach that connects investment, operations, and project development.",
+      "paragraph2": "We support companies and investors seeking to enter or expand within the Saudi market, from market research and opportunity assessment through planning, preparation, operations, and development — following a practical approach that connects market requirements with execution capabilities.",
+      "imageCaption": "Opportunities Today.. Sustainable Value for a Better Tomorrow",
+      "journey": {
+        "discovery": {
+          "title": "Discover the Opportunity",
+          "desc": "We identify high-potential opportunities with real market potential."
+        },
+        "partnership": {
+          "title": "Partner Alongside",
+          "desc": "We invest alongside management teams and strategic partners."
+        },
+        "operations": {
+          "title": "Lead Operations",
+          "desc": "We contribute to development, operations, and management."
+        },
+        "value": {
+          "title": "Build Long-Term Value",
+          "desc": "We build sustainable operational value with long-term potential."
+        },
+        "cta": "Explore Our Services"
+      }
+    },
+    "model": {
+      "eyebrow": "INTEGRATED OPERATING MODEL",
+      "title": "From Investment to Operations — One System for Building Value",
+      "subtitle": "ZAN brings together investment, operations, and project development within one integrated model, turning promising opportunities into projects ready for execution, growth, and development.",
+      "dimensions": {
+        "investment": {
+          "number": "01",
+          "title": "Investment",
+          "desc": "We identify and assess promising investment opportunities, aligning them with market requirements and the objectives of our partners."
+        },
+        "operations": {
+          "number": "02",
+          "title": "Operations",
+          "desc": "We translate plans and studies into structured operations, with a focus on efficiency, management, and continuous performance oversight."
+        },
+        "development": {
+          "number": "03",
+          "title": "Project Development",
+          "desc": "We develop projects, improve their performance, and explore new paths for expansion and growth to strengthen long-term value."
+        }
+      },
+      "synthesis": {
+        "title": "ONE INTEGRATED MODEL",
+        "desc": "When investment, operations, and project development work together, opportunities can evolve into more cohesive businesses with the capacity to grow and create sustainable value."
+      }
+    },
+    "visionMission": {
+      "heading": "Vision & Strategic Mission",
+      "eyebrow": "STRATEGIC FOUNDATIONS",
+      "vision": {
+        "label": "Vision",
+        "title": "To be a trusted investment partner in building and developing projects that create sustainable value in the Saudi market.",
+        "supporting": "We aim to build projects that create lasting value by combining sound planning with the ability to execute, operate, and respond to the needs of the Saudi market."
+      },
+      "mission": {
+        "label": "Mission",
+        "title": "To provide innovative investment and operational solutions that support the growth and sustainability of our partners.",
+        "supporting": "We are committed to building and managing viable projects through disciplined opportunity selection, professional management, and effective long-term strategic alliances."
+      },
+      "principles": {
+        "opportunities": "Disciplined Opportunity Selection",
+        "management": "Professional Management",
+        "alliances": "Strategic Alliances"
+      }
+    },
+    "sectors": {
+      "eyebrow": "Our Investment Sectors",
+      "title": "Quality Investment Fields Where We Create Value",
+      "subtitle": "We invest in and operate a diverse portfolio of promising vital sectors in the Saudi market, focusing on operational efficiency and sustainable returns.",
+      "items": {
+        "food": {
+          "number": "01",
+          "title": "Food & Restaurant Sector",
+          "desc": "Investing in promising hospitality and restaurant concepts and developing their operational efficiency for expansion and success."
+        },
+        "hospitality": {
+          "number": "02",
+          "title": "Hospitality & Hotel Sector",
+          "desc": "Developing and managing hospitality assets with professional standards that enhance the customer experience and elevate investment value."
+        },
+        "commercial": {
+          "number": "03",
+          "title": "Commercial Projects",
+          "desc": "Building and managing strategic commercial projects that meet the needs of a growing market."
+        },
+        "development": {
+          "number": "04",
+          "title": "Real Estate & Qualitative Development",
+          "desc": "Planning and executing quality projects that enhance capital value and support sustainable growth pathways."
+        }
+      }
+    },
+    "cta": {
+      "title": "Would you like to build a sustainable strategic partnership with us?",
+      "subtitle": "We welcome communication with investors, companies, and ambitious visionaries to explore cooperation horizons and build fruitful developmental partnerships in the Saudi market.",
+      "button": "Start Partnership"
     }
   }
 }
