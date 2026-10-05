@@ -73,7 +73,7 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
           >
             <Link
-              to={`/${language}/opportunities`}
+              to={`/${language}/services`}
               className="px-8 py-4 bg-gold hover:bg-gold-dark text-navy-dark font-bold text-sm rounded-btn transition-all duration-200 flex items-center justify-center gap-2 shadow-elevated group"
             >
               <span>{t('home.hero.primaryCta')}</span>

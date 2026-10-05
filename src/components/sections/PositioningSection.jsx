@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; // تم إضافة استيراد Link لمنع الشاشة البيضاء
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import {
   ArrowUpLeft,
@@ -31,7 +31,7 @@ const JOURNEY_KEYS = [
 ];
 
 export function PositioningSection() {
-  const { t, language } = useLanguage(); // تم تضمين language هنا لكي يعمل الراوت بنجاح
+  const { t, language } = useLanguage();
 
   return (
     <section
@@ -71,7 +71,6 @@ export function PositioningSection() {
                   className="w-full aspect-[4/5] object-cover object-center"
                 />
 
-                {/* subtle image treatment */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 via-transparent to-transparent" />
               </div>
 
@@ -150,17 +149,7 @@ export function PositioningSection() {
       {/* ─────────────────────────────────────────────
           ZAN JOURNEY
       ───────────────────────────────────────────── */}
-      <div className="relative bg-navy-dark text-white overflow-hidden">
-
-        {/* Background architectural lines */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.06]"
-        >
-          <div className="absolute -top-40 -end-40 w-[520px] h-[520px] rounded-full border border-white" />
-          <div className="absolute -top-28 -end-28 w-[400px] h-[400px] rounded-full border border-white" />
-          <div className="absolute -top-16 -end-16 w-[280px] h-[280px] rounded-full border border-white" />
-        </div>
+      <div className="relative bg-[#0d1629] text-white overflow-hidden bg-[linear-gradient(to_right,#131f37_1px,transparent_1px),linear-gradient(to_bottom,#131f37_1px,transparent_1px)] bg-[size:4rem_4rem] [background-image:linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)]">
 
         <div className="relative max-w-container mx-auto px-5 md:px-8 py-16 md:py-20 lg:py-24">
 
@@ -185,10 +174,10 @@ export function PositioningSection() {
           {/* Journey timeline */}
           <div className="relative">
 
-            {/* Desktop connecting line */}
+            {/* Desktop connecting line adjusted to start from first icon center and end at last icon center */}
             <div
               aria-hidden="true"
-              className="hidden lg:block absolute top-[27px] start-[8%] end-[8%] h-px bg-white/15"
+              className="hidden lg:block absolute top-[28px] left-[28px] right-[28px] h-px bg-white/15 z-0"
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-5">
@@ -210,7 +199,7 @@ export function PositioningSection() {
                   >
                     {/* Number / node */}
                     <div className="relative z-10 flex items-center gap-3 lg:block">
-                      <div className="flex items-center justify-center w-14 h-14 rounded-full border border-white/15 bg-navy-dark text-gold transition-all duration-300 group-hover:border-gold/60 group-hover:bg-gold group-hover:text-navy-dark">
+                      <div className="flex items-center justify-center w-14 h-14 rounded-full border border-white/15 bg-[#0d1629] text-gold transition-all duration-300 group-hover:border-gold/60 group-hover:bg-gold group-hover:text-navy-dark">
                         <Icon className="w-5 h-5" strokeWidth={1.7} />
                       </div>
 

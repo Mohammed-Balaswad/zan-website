@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { IMAGES } from '../../constants/images';
-import { ArrowUpRight, Building2 } from 'lucide-react';
+import { ArrowUpRight, Handshake } from 'lucide-react';
 
 export function HomeCtaSection() {
   const { language, t } = useLanguage();
 
   return (
-    <section className="py-20 lg:py-24 bg-surface-offwhite">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export function HomeCtaSection() {
           {/* Banner Content */}
           <div className="relative z-10 max-w-2xl space-y-4">
             <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-2">
-              <Building2 className="w-6 h-6" />
+              <Handshake className="w-6 h-6" />
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">

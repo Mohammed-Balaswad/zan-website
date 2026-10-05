@@ -31,7 +31,7 @@
       "eyebrow": "ZAN Global Investments",
       "title": "Investment Ecosystem & Project Development in Saudi Arabia",
       "subtitle": "We own, manage, develop, and present high-potential investment projects while building strategic alliances with investors and corporate partners across key economic sectors.",
-      "primaryCta": "Explore Opportunities",
+      "primaryCta": "Explore Our Services",
       "secondaryCta": "About ZAN"
     },
     "positioning": {
@@ -109,14 +109,23 @@
       }
     },
     "partners": {
-      "eyebrow": "Strategic Alliances",
-      "title": "Long-Term Partnerships with Industry Leaders",
-      "subtitle": "We take pride in collaborating with prominent corporate partners to execute projects of lasting impact."
+      "eyebrow": "STRATEGIC PARTNERSHIPS",
+      "title": "Partnerships That Create Lasting Value",
+      "subtitle": "We build strategic relationships with companies and organizations across multiple sectors to support opportunities and projects we develop together.",
+      "footer": "Partnerships that bring together expertise and execution",
+      "names": {
+        "orienz": "Orienz Hotels",
+        "madmadan": "Madmadan",
+        "rehlatMusafer": "Rehlat Musafer",
+        "sadrAlhijaz": "Sadr Al-Hijaz Contracting",
+        "unitedForce": "United Force Trading",
+        "wathbah": "Wathbah"
+      }
     },
     "cta": {
-      "title": "Seeking a Strategic Investment Partner?",
-      "subtitle": "Our executive team welcomes discussions regarding partnership models and joint investment ventures.",
-      "button": "Connect with Investment Team"
+      "title": "Have an Opportunity or Project Worth Developing?",
+      "subtitle": "We look forward to discussing investment opportunities, project development, and partnerships that can be turned into executable and scalable projects.",
+      "button": "Talk to ZAN"
     }
   },
   "footer": {

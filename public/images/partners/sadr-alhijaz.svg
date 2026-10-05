@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 418.3 442.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #092279;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-6 {
+        fill: none;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath-5);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-6" x="227.02" y="55.87" width="57.48" height="319.46"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-6" x="226.62" y="55.73" width="58.12" height="319.64"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-6" x="360.82" y="215.62" width="57.48" height="159.73"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-6" x="360.5" y="215.55" width="58.12" height="159.82"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="cls-6" x="0" width="146.68" height="375.33"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-6" x="-.13" y="-.31" width="146.85" height="375.68"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g class="cls-5">
+        <g class="cls-3">
+          <path class="cls-1" d="m227.02,97.46l57.48-41.59v319.48h-57.48V97.46Z"/>
+        </g>
+      </g>
+      <g class="cls-2">
+        <g class="cls-7">
+          <path class="cls-1" d="m360.82,247.61l57.48-31.99v159.63h-57.48v-127.64Z"/>
+        </g>
+      </g>
+      <g class="cls-4">
+        <g class="cls-8">
+          <path class="cls-1" d="m0,84.22L146.68,0v375.29H0V84.22Z"/>
+        </g>
+      </g>
+      <path d="m0,442.3c50.64-15.97,126.31-33.49,219.02-32.17,83.08,1.18,151.45,17.08,199.28,32.17-33.57-17.08-78.77-35.43-134.17-45.96-27.29-5.18-52.53-7.61-74.98-8.43-27.79,1.03-61.79,4.59-99.66,13.79-44.9,10.9-81.72,26.43-109.49,40.6Z"/>
+    </g>
+  </g>
+</svg>
