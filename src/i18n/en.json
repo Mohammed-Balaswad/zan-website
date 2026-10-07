@@ -18,11 +18,11 @@
     "home": "Home",
     "about": "About ZAN",
     "investment": "Investment",
-    "projects": "Investments & Projects",
-    "opportunities": "Investment Opportunities",
+    "projects": "Projects",
+    "opportunities": "Opportunities",
     "partnershipsMenu": "Partnerships",
     "services": "Services",
-    "partners": "Strategic Partners",
+    "partners": "Partners",
     "partnerships": "Investors & Partnerships",
     "contact": "Contact Us"
   },
@@ -293,6 +293,170 @@
       "title": "Would you like to build a sustainable strategic partnership with us?",
       "subtitle": "We welcome communication with investors, companies, and ambitious visionaries to explore cooperation horizons and build fruitful developmental partnerships in the Saudi market.",
       "button": "Start Partnership"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "eyebrow": "ZAN Global Investments Services",
+      "title": "From Establishment to Operations & Development",
+      "subtitle": "We help foreign companies and investors enter the Saudi market and transform their investment ideas into viable, growing projects — through integrated services spanning legal establishment to turnkey operation and strategic development.",
+      "tagline": "Your Partner in the Saudi Market",
+      "exploreButton": "Explore Our Services",
+      "journeyButton": "Project Journey",
+      "highlights": {
+        "marketEntry": {
+          "label": "Establishment & Licensing",
+          "value": "Seamless Market Entry"
+        },
+        "feasibilityPlan": {
+          "label": "Feasibility & Planning",
+          "value": "Financial & Operational Models"
+        },
+        "operationsGrowth": {
+          "label": "Operations & Growth",
+          "value": "Hands-on Management & Scale"
+        }
+      }
+    },
+    "overview": {
+      "eyebrow": "INTEGRATED SERVICE MODEL",
+      "title": "Connecting Investment, Execution and Value Creation",
+      "subtitle": "We do not treat projects as separate services. We connect opportunity, planning, execution and development within one integrated model.",
+      "dimensions": {
+        "investment": {
+          "title": "Investment",
+          "description": "We understand opportunities, assess their potential, and align them with market requirements and partner objectives."
+        },
+        "planning": {
+          "title": "Planning",
+          "description": "We turn the vision into clear, practical plans that prepare the project for execution and launch."
+        },
+        "operations": {
+          "title": "Operations",
+          "description": "We help turn plans into structured operations focused on efficiency and stable performance."
+        },
+        "development": {
+          "title": "Development",
+          "description": "We improve performance, enhance efficiency, and prepare projects for sustainable growth and expansion."
+        }
+      },
+      "closing": "An integrated model that supports the project from idea to execution and growth."
+    },
+    "journey": {
+      "eyebrow": "Institutional Workflow",
+      "title": "The Project Journey with ZAN",
+      "subtitle": "A clear sequential path of seven stages guiding the project from the initial establishment phase to operations and expansion.",
+      "stageLabel": "STAGE",
+      "bottomBar": {
+        "text": "ZAN — Your Partner in Saudi Arabia: Establishment | Advisory | Studies | Operations | Development | Expansion",
+        "badge": "Integrated Methodology"
+      },
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Company Establishment",
+          "desc": "Issuing investment and commercial licenses, issuing the commercial register (CR), and completing legal procedures and government platforms."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Market Study",
+          "desc": "Analyzing the market and competitors, identifying target customers and promising investment opportunities, and selecting the most appropriate location and activity."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Feasibility Study",
+          "desc": "Preparing financial and operational studies, estimating expected costs and revenues, calculating profits, break-even point, and ROI."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Business Plan",
+          "desc": "Preparing an integrated operational plan, building the administrative and operational structure, and defining human resources, suppliers, and procedures."
+        },
+        "step5": {
+          "number": "05",
+          "title": "Preparation",
+          "desc": "Preparing headquarters, technical and operational setups, and preparing work teams and approved systems for launch."
+        },
+        "step6": {
+          "number": "06",
+          "title": "Operations",
+          "desc": "Initiating actual project operations, managing daily operations efficiently, and tracking workflow accurately and professionally."
+        },
+        "step7": {
+          "number": "07",
+          "title": "Development & Expansion",
+          "desc": "Improving operational performance, reducing costs, increasing profitability, and expanding the business base locally and regionally."
+        }
+      }
+    },
+    "detailed": {
+      "eyebrow": "Core Capabilities",
+      "title": "Our Specialized Services",
+      "subtitle": "Five core service areas engineered to support investment projects across Saudi Arabia with institutional rigor and operational excellence.",
+      "featuresLabel": "Core Capabilities & Deliverables:",
+      "items": {
+        "establishment": {
+          "number": "01",
+          "category": "Licensing & Incorporation",
+          "title": "Company Establishment",
+          "desc": "End-to-end statutory and regulatory enablement for domestic and international investors entering the Saudi commercial ecosystem.",
+          "features": [
+            "Investment and commercial licenses",
+            "Company establishment and Commercial Registration (CR) issuance",
+            "Legal procedures and government platform registrations"
+          ]
+        },
+        "market": {
+          "number": "02",
+          "category": "Market Intelligence",
+          "title": "Market Study",
+          "desc": "Data-driven market intelligence identifying high-yield opportunities, competitive gaps, and optimal commercial positioning.",
+          "features": [
+            "Market and competitor analysis",
+            "Identifying target clients and investment opportunities",
+            "Selecting suitable commercial activities and strategic locations"
+          ]
+        },
+        "feasibility": {
+          "number": "03",
+          "category": "Financial & Operational Modeling",
+          "title": "Feasibility Study",
+          "desc": "Rigorous financial, commercial, and operational assessments providing investors with transparent visibility into profitability.",
+          "features": [
+            "Financial and operational feasibility analysis",
+            "Projected costs and anticipated revenue modeling",
+            "Profits, break-even analysis, and return on investment (ROI)"
+          ]
+        },
+        "businessPlan": {
+          "number": "04",
+          "category": "Operational Governance",
+          "title": "Business & Operating Plan",
+          "desc": "Translating strategic intent into actionable frameworks covering organizational hierarchy, standard operating procedures, and resources.",
+          "features": [
+            "Development of an integrated operational plan",
+            "Administrative and operational organizational structure",
+            "Human resources planning, supplier networks, and operating procedures"
+          ]
+        },
+        "operations": {
+          "number": "05",
+          "category": "Executive Management & Growth",
+          "title": "Project Operation & Development",
+          "desc": "Active on-the-ground operating partnership managing emerging ventures and enhancing established enterprises for sustainable profitability.",
+          "features": [
+            "Turnkey operation of emerging projects and startups",
+            "Management and development of established enterprises",
+            "Performance optimization, cost reduction, and profitability growth"
+          ]
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready to Build",
+      "title": "Planning to Enter the Saudi Market or Scale an Existing Enterprise?",
+      "subtitle": "We welcome discussions with corporate leaders, investors, and entrepreneurs seeking strategic establishment, rigorous feasibility, and execution excellence.",
+      "button": "Contact ZAN Team"
     }
   }
 }

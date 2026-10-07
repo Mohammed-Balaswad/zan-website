@@ -5,7 +5,7 @@ import { useLanguage } from '../../../context/LanguageContext';
 import { IMAGES } from '../../../constants/images';
 import { ArrowUpRight, Handshake } from 'lucide-react';
 
-export function AboutCta() {
+export function ServicesCta() {
   const { language, t, isRTL } = useLanguage();
 
   return (
@@ -22,24 +22,29 @@ export function AboutCta() {
           <div className="absolute inset-0 z-0">
             <img
               src={IMAGES.ctaBanner}
-              alt="ZAN Institutional Partnerships"
-              className="w-full h-full object-cover object-center filter brightness-50 opacity-40"
+              alt="ZAN Institutional Advisory"
+              className="w-full h-full object-cover object-center filter brightness-50 opacity-35"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-navy-dark/80" />
           </div>
 
           {/* Banner Content */}
           <div className="relative z-10 max-w-2xl space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-2">
+            <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/40 flex items-center justify-center text-gold mb-2 shadow-inner">
               <Handshake className="w-6 h-6" />
             </div>
 
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gold">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+              <span>{t('servicesPage.cta.eyebrow')}</span>
+            </div>
+
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
-              {t('aboutPage.cta.title')}
+              {t('servicesPage.cta.title')}
             </h2>
 
             <p className="text-xs sm:text-sm text-text-light/90 leading-relaxed font-normal">
-              {t('aboutPage.cta.subtitle')}
+              {t('servicesPage.cta.subtitle')}
             </p>
 
             <div className="pt-4">
@@ -47,8 +52,12 @@ export function AboutCta() {
                 to={`/${language}/contact`}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-dark text-navy font-bold text-sm rounded-btn transition-colors shadow-subtle group"
               >
-                <span>{t('aboutPage.cta.button')}</span>
-                <ArrowUpRight className={`w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${isRTL ? 'rotate-90' : ''}`} />
+                <span>{t('servicesPage.cta.button')}</span>
+                <ArrowUpRight
+                  className={`w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
+                    isRTL ? 'rotate-90' : ''
+                  }`}
+                />
               </Link>
             </div>
           </div>

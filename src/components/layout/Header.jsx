@@ -6,7 +6,6 @@ import { Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
 import {
   FEATURE_FLAGS,
   hasVisibleInvestmentLinks,
-  hasVisiblePartnershipLinks,
 } from '../../config/features';
 
 export function Header() {
@@ -15,26 +14,22 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Dropdown states for desktop
+  // Dropdown state for desktop (Investment only now)
   const [investmentOpen, setInvestmentOpen] = useState(false);
-  const [partnershipsOpen, setPartnershipsOpen] = useState(false);
 
   const investmentRef = useRef(null);
-  const partnershipsRef = useRef(null);
 
   // التحقق من المسارات التي تتطلب نافبار شفافة في أعلى الصفحة
   const transparentPaths = [
     '/',
     `/${language}`,
-    `/${language}/`,
     `/${language}/about`,
-    `/${language}/about/`,
+    `/${language}/services`,
+    // `/${language}/partners`,
   ];
 
   const isTransparentPage = transparentPaths.includes(location.pathname);
   const isTransparent = isTransparentPage && !isScrolled;
-
-
 
   // Responsive breakpoint helpers for Russian vs Arabic/English
   const isRussian = language === 'ru';
@@ -61,7 +56,6 @@ export function Header() {
   useEffect(() => {
     setMobileMenuOpen(false);
     setInvestmentOpen(false);
-    setPartnershipsOpen(false);
   }, [location.pathname]);
 
   // Close dropdowns on click outside
@@ -69,9 +63,6 @@ export function Header() {
     function handleClickOutside(event) {
       if (investmentRef.current && !investmentRef.current.contains(event.target)) {
         setInvestmentOpen(false);
-      }
-      if (partnershipsRef.current && !partnershipsRef.current.contains(event.target)) {
-        setPartnershipsOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -83,7 +74,6 @@ export function Header() {
     function handleKeyDown(event) {
       if (event.key === 'Escape') {
         setInvestmentOpen(false);
-        setPartnershipsOpen(false);
         setMobileMenuOpen(false);
       }
     }
@@ -98,16 +88,12 @@ export function Header() {
     ...(FEATURE_FLAGS.nav.investmentProjects ? [`/${language}/projects`] : []),
     ...(FEATURE_FLAGS.nav.investmentOpportunities ? [`/${language}/opportunities`] : []),
   ];
-  const partnershipsPaths = [
-    ...(FEATURE_FLAGS.nav.strategicPartners ? [`/${language}/partners`] : []),
-    ...(FEATURE_FLAGS.nav.investorsPartnerships ? [`/${language}/partnerships`] : []),
-  ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300 ${isTransparent
-  ? 'bg-transparent text-white border-b border-white/10'
-  : 'bg-white/95 backdrop-blur-md border-b border-border/80 shadow-subtle text-navy'
+          ? 'bg-transparent text-white border-b border-white/10'
+          : 'bg-white/95 backdrop-blur-md border-b border-border/80 shadow-subtle text-navy'
         }`}
     >
       <div className="max-w-container mx-auto px-4 md:px-8 h-full flex items-center justify-between">
@@ -177,7 +163,6 @@ export function Header() {
                 type="button"
                 onClick={() => {
                   setInvestmentOpen(!investmentOpen);
-                  setPartnershipsOpen(false);
                 }}
                 className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isPathActive(investmentPaths)
                     ? isTransparent
@@ -242,79 +227,7 @@ export function Header() {
             </div>
           )}
 
-          {/* 4. Partnerships Dropdown (Click Interaction) */}
-          {hasVisiblePartnershipLinks && (
-            <div className="relative" ref={partnershipsRef}>
-              <button
-                type="button"
-                onClick={() => {
-                  setPartnershipsOpen(!partnershipsOpen);
-                  setInvestmentOpen(false);
-                }}
-                className={`flex items-center gap-1 text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isPathActive(partnershipsPaths)
-                    ? isTransparent
-                      ? 'text-white font-bold border-gold'
-                      : 'text-navy font-bold border-gold'
-                    : isTransparent
-                      ? 'text-white/90 border-transparent hover:border-gold/50'
-                      : 'text-text-dark/80 border-transparent hover:border-gold/50'
-                  }`}
-                aria-expanded={partnershipsOpen}
-                aria-haspopup="true"
-                aria-label={t('nav.partnershipsMenu')}
-              >
-                <span>{t('nav.partnershipsMenu')}</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${partnershipsOpen ? 'rotate-180 text-gold' : ''}`} />
-              </button>
-
-              {partnershipsOpen && (
-                <div
-                  className={`absolute top-full mt-2 ltr:left-0 rtl:right-0 min-w-[210px] border rounded-btn shadow-elevated py-2 z-50 animate-fadeIn ${isTransparent
-                      ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md'
-                      : 'bg-white border-border text-navy'
-                    }`}
-                  role="menu"
-                >
-                  {FEATURE_FLAGS.nav.strategicPartners && (
-                    <NavLink
-                      to={`/${language}/partners`}
-                      onClick={() => setPartnershipsOpen(false)}
-                      className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
-                          ? 'border-gold text-gold bg-gold/10'
-                          : isTransparent
-                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                        }`
-                      }
-                      role="menuitem"
-                    >
-                      {t('nav.partners')}
-                    </NavLink>
-                  )}
-                  {FEATURE_FLAGS.nav.investorsPartnerships && (
-                    <NavLink
-                      to={`/${language}/partnerships`}
-                      onClick={() => setPartnershipsOpen(false)}
-                      className={({ isActive }) =>
-                        `block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2 rtl:border-l-0 rtl:border-r-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${isActive
-                          ? 'border-gold text-gold bg-gold/10'
-                          : isTransparent
-                            ? 'border-transparent text-white/90 hover:bg-white/10 hover:text-white'
-                            : 'border-transparent text-text-dark hover:bg-surface-offwhite hover:text-navy'
-                        }`
-                      }
-                      role="menuitem"
-                    >
-                      {t('nav.partnerships')}
-                    </NavLink>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* 5. Services */}
+          {/* 4. Services */}
           <NavLink
             to={`/${language}/services`}
             className={({ isActive }) =>
@@ -329,6 +242,23 @@ export function Header() {
             }
           >
             {t('nav.services')}
+          </NavLink>
+
+          {/* 5. Partners (Direct Link - After Services) */}
+          <NavLink
+            to={`/${language}/partners`}
+            className={({ isActive }) =>
+              `text-xs xl:text-sm font-semibold transition-colors duration-200 hover:text-gold whitespace-nowrap py-1 px-1 border-b-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-sm ${isActive
+                ? isTransparent
+                  ? 'text-white font-bold border-gold'
+                  : 'text-navy font-bold border-gold'
+                : isTransparent
+                  ? 'text-white/90 border-transparent hover:border-gold/50'
+                  : 'text-text-dark/80 border-transparent hover:border-gold/50'
+              }`
+            }
+          >
+            {t('nav.partners') || 'الشراكات'}
           </NavLink>
 
           {/* 6. Contact Us */}
@@ -449,42 +379,7 @@ export function Header() {
               </div>
             )}
 
-            {/* 4. Partnerships Group */}
-            {hasVisiblePartnershipLinks && (
-              <div className="py-2 border-b border-white/10">
-                <div className="text-xs uppercase tracking-wider text-gold font-bold mb-2">
-                  {t('nav.partnershipsMenu')}
-                </div>
-                <div className="ltr:pl-3 rtl:pr-3 flex flex-col space-y-2">
-                  {FEATURE_FLAGS.nav.strategicPartners && (
-                    <NavLink
-                      to={`/${language}/partners`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                        }`
-                      }
-                    >
-                      {t('nav.partners')}
-                    </NavLink>
-                  )}
-                  {FEATURE_FLAGS.nav.investorsPartnerships && (
-                    <NavLink
-                      to={`/${language}/partnerships`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={({ isActive }) =>
-                        `text-xs font-semibold py-1.5 ${isActive ? 'text-gold font-bold' : 'text-white/80 hover:text-white'
-                        }`
-                      }
-                    >
-                      {t('nav.partnerships')}
-                    </NavLink>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* 5. Services */}
+            {/* 4. Services */}
             <NavLink
               to={`/${language}/services`}
               onClick={() => setMobileMenuOpen(false)}
@@ -494,6 +389,18 @@ export function Header() {
               }
             >
               {t('nav.services')}
+            </NavLink>
+
+            {/* 5. Partners (Direct Link in Mobile) */}
+            <NavLink
+              to={`/${language}/partners`}
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `text-sm font-semibold py-2.5 border-b border-white/10 ${isActive ? 'text-gold font-bold border-gold' : 'text-white/90 hover:text-gold'
+                }`
+              }
+            >
+              {t('nav.partners') || 'الشراكات'}
             </NavLink>
 
             {/* 6. Contact Us */}
