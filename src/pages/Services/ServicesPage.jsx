@@ -1,27 +1,29 @@
 import React from 'react';
-import { useLanguage } from '../../context/LanguageContext';
-import { SERVICES_DATA } from '../../data/services';
+import { ServicesHero } from './components/ServicesHero';
+import { ServicesOverview } from './components/ServicesOverview';
+import { ServicesJourney } from './components/ServicesJourney';
+import { ServiceDetail } from './components/ServiceDetail';
+import { ServicesCta } from './components/ServicesCta';
 
 export function ServicesPage() {
-  const { t, language } = useLanguage();
-
   return (
-    <div className="max-w-container mx-auto px-4 md:px-8 py-12">
-      <h1 className="text-2xl font-bold text-navy mb-6">
-        {t('nav.services')}
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {SERVICES_DATA.map((srv) => (
-          <div key={srv.id} className="bg-white p-6 rounded-card border border-border">
-            <h3 className="text-base font-bold text-navy mb-2">
-              {srv.title[language] || srv.title.ar}
-            </h3>
-            <p className="text-xs text-text-muted">
-              {srv.description[language] || srv.description.ar}
-            </p>
-          </div>
-        ))}
-      </div>
+    <div className="w-full">
+      {/* 1. Institutional Hero */}
+      <ServicesHero />
+
+      {/* 2. Services Overview / Strategic Integrated Model */}
+      <ServicesOverview />
+
+      {/* 3. ZAN Service Journey (The 7 Stages from Establishment to Expansion) */}
+      <ServicesJourney />
+
+      {/* 4. Detailed Service Areas (The 5 Core Pillars from zan-services.pdf) */}
+      <ServiceDetail />
+
+      {/* 5. Closing Institutional Call to Action */}
+      <ServicesCta />
     </div>
   );
 }
+
+export default ServicesPage;

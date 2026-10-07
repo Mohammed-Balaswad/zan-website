@@ -1,76 +1,106 @@
 /**
- * ZAN Services Ecosystem Data
- * Positioned within ZAN's broader investment and project development ecosystem.
+ * ZAN Services Ecosystem Data Architecture
+ * Based strictly on the authoritative source: references/zan-services.pdf
+ * 
+ * Provides structured models for:
+ * 1. The 5 Core Service Pillars
+ * 2. The 7 Project Journey Stages
+ * 3. Slogan & Slogan Badges
  */
-export const SERVICES_DATA = [
+
+export const SERVICES_PILLARS = [
   {
-    id: 'srv-01',
-    category: 'investment',
-    title: {
-      ar: 'هيكلة وتطوير الاستثمارات',
-      en: 'Investment Structuring & Development',
-      ru: 'Структурирование и развитие инвестиций',
-    },
-    description: {
-      ar: 'تقديم نموذج استثماري متكامل يشمل دراسة الجدوى وتحديد نماذج التمويل وهيكلة الشراكات.',
-      en: 'Delivering comprehensive investment frameworks covering feasibility, financial modeling, and partnership structuring.',
-      ru: 'Предоставление комплексных инвестиционных моделей, включая ТЭО и структурирование партнерств.',
-    },
+    id: 'establishment',
+    number: '01',
+    key: 'establishment',
+    categoryKey: 'licensing',
+    iconName: 'Building2',
   },
   {
-    id: 'srv-02',
-    category: 'project-development',
-    title: {
-      ar: 'تطوير المشاريع الاستراتيجية',
-      en: 'Strategic Project Development',
-      ru: 'Развитие стратегических проектов',
-    },
-    description: {
-      ar: 'قيادة مرحلة التخطيط والتطوير الأولي للمشاريع الكبرى وضمان توافقها مع أعلى التوجهات الوطنية.',
-      en: 'Leading conceptual design, master planning, and initial development phases for large-scale enterprise projects.',
-      ru: 'Руководство концептуальным проектированием и этапами разработки крупных проектов.',
-    },
+    id: 'market-study',
+    number: '02',
+    key: 'market',
+    categoryKey: 'intelligence',
+    iconName: 'TrendingUp',
   },
   {
-    id: 'srv-03',
-    category: 'project-management',
-    title: {
-      ar: 'إدارة وحوكمة المشاريع',
-      en: 'Project Management & Governance',
-      ru: 'Управление проектами и корпоративное управление',
-    },
-    description: {
-      ar: 'إشراف تنفيذي دقيق على جودة وتوقيت وميزانيات المشاريع المستهدفة لضمان أعلى عائد استثماري.',
-      en: 'Rigorous executive oversight covering project schedules, quality control, and budget adherence.',
-      ru: 'Исполнительный контроль сроков, качества и бюджета проектов для максимальной доходности.',
-    },
+    id: 'feasibility-study',
+    number: '03',
+    key: 'feasibility',
+    categoryKey: 'financial',
+    iconName: 'Calculator',
   },
   {
-    id: 'srv-04',
-    category: 'operations',
-    title: {
-      ar: 'إدارة التشغيل والأصول',
-      en: 'Operations & Asset Management',
-      ru: 'Управление операциями и активами',
-    },
-    description: {
-      ar: 'نموذج تشغيلي مستدام يرفع من كفاءة الأصل الاستثماري ويحافظ على قيمته الاقتصادية طويلة الأمد.',
-      en: 'Sustainable operational models engineered to maximize asset value and long-term economic performance.',
-      ru: 'Устойчивые операционные модели для максимальной эффективности активов в долгосрочной перспективе.',
-    },
+    id: 'business-plan',
+    number: '04',
+    key: 'businessPlan',
+    categoryKey: 'operational',
+    iconName: 'FileSpreadsheet',
   },
   {
-    id: 'srv-05',
-    category: 'strategic-development',
-    title: {
-      ar: 'تطوير التحالفات والشراكات',
-      en: 'Strategic Partnerships & Alliances',
-      ru: 'Стратегические партнерства и альянсы',
-    },
-    description: {
-      ar: 'بناء جسور التواصل بين المستثمرين والجهات الحكومية والقطاع الخاص لخلق فرص استثمارية فريدة.',
-      en: 'Connecting global investors, corporate entities, and government stakeholders to unlock joint value.',
-      ru: 'Объединение инвесторов, корпораций и государственных структур для создания совместной ценности.',
-    },
+    id: 'project-operations',
+    number: '05',
+    key: 'operations',
+    categoryKey: 'execution',
+    iconName: 'Layers',
   },
 ];
+
+export const SERVICES_JOURNEY_STAGES = [
+  {
+    id: 'stage-establishment',
+    number: '01',
+    key: 'step1',
+  },
+  {
+    id: 'stage-market',
+    number: '02',
+    key: 'step2',
+  },
+  {
+    id: 'stage-feasibility',
+    number: '03',
+    key: 'step3',
+  },
+  {
+    id: 'stage-plan',
+    number: '04',
+    key: 'step4',
+  },
+  {
+    id: 'stage-prep',
+    number: '05',
+    key: 'step5',
+  },
+  {
+    id: 'stage-operation',
+    number: '06',
+    key: 'step6',
+  },
+  {
+    id: 'stage-expansion',
+    number: '07',
+    key: 'step7',
+  },
+];
+
+export const SERVICES_HERO_HIGHLIGHTS = [
+  {
+    id: 'market-entry',
+    key: 'marketEntry',
+    iconName: 'ShieldCheck',
+  },
+  {
+    id: 'integrated-planning',
+    key: 'feasibilityPlan',
+    iconName: 'CheckCircle2',
+  },
+  {
+    id: 'turnkey-operations',
+    key: 'operationsGrowth',
+    iconName: 'BarChart3',
+  },
+];
+
+// Backward-compatible alias if imported elsewhere
+export const SERVICES_DATA = SERVICES_PILLARS;

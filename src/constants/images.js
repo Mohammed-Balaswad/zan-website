@@ -28,4 +28,9 @@ export const IMAGES = {
   aboutHero: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2000&auto=format&fit=crop', // Prestigious architectural financial center
   aboutWhoWeAre: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop', // Institutional corporate architecture & light
   aboutArchitecture: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop', // Architectural geometry
+
+  // Services Page Curated Imagery
+  servicesHero: '/images/riyadh-hero-3.jpg', // Riyadh Financial & Business Core
+  servicesOverview: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop', // Institutional high-rise architecture
 };
+

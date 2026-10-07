@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroSection } from '../../components/sections/HeroSection';
+import { HomeHero } from '../../components/sections/HomeHero';
 import { PositioningSection } from '../../components/sections/PositioningSection';
 import { ProjectShowcaseSection } from '../../components/sections/ProjectShowcaseSection';
 import { OpportunitiesSection } from '../../components/sections/OpportunitiesSection';
@@ -12,7 +12,7 @@ export function HomePage() {
   return (
     <div className="w-full">
       {/* 1. Hero Section */}
-      <HeroSection />
+      <HomeHero />
 
       {/* 2. ZAN Positioning & Institutional Overview */}
       <PositioningSection />
