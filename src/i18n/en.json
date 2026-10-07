@@ -461,5 +461,77 @@
       "subtitle": "We welcome discussions with corporate leaders, investors, and entrepreneurs seeking strategic establishment, rigorous feasibility, and execution excellence.",
       "button": "Contact ZAN Team"
     }
+  },
+  "partnersPage": {
+    "hero": {
+      "eyebrow": "ZAN Global Investment Partners",
+      "title": "Partnerships That Expand Our Execution Capability",
+      "subtitle": "We build strategic relationships with leading entities and companies across diverse sectors, combining expertise and execution power to support the projects and opportunities we develop.",
+      "highlights": {
+        "networkLabel": "Active Partners",
+        "networkValue": "6+",
+        "trustLabel": "Partnership Model",
+        "trustValue": "Strategic",
+        "sectorsLabel": "Represented Sectors",
+        "sectorsValue": "Multi-Sector"
+      }
+    },
+    "overview": {
+      "eyebrow": "PARTNERSHIPS IN OUR MODEL",
+      "title": "Partnership Is Part of Our Model",
+      "statement": "We connect opportunities with the expertise and capabilities needed to turn them into executable and scalable projects.",
+      "subtitle": "At ZAN, partnerships extend beyond a commercial relationship. They bring together complementary expertise and operational capabilities around opportunities and projects, creating value that develops alongside them.",
+      "dimensions": {
+        "expertise": {
+          "title": "Bringing Expertise Together",
+          "description": "We work with companies and organizations whose expertise and capabilities complement the development of opportunities and projects."
+        },
+        "integration": {
+          "title": "Integrating Capabilities",
+          "description": "We connect complementary capabilities around a project to support planning, execution, and operations."
+        },
+        "value": {
+          "title": "Building Shared Value",
+          "description": "We aim to build long-term relationships that contribute to project development and create sustainable value for the parties involved."
+        }
+      }
+    },
+    "showcase": {
+      "eyebrow": "OUR PARTNERS",
+      "title": "A Network of Relationships That Supports Our Ability to Develop and Execute",
+      "subtitle": "We build strategic relationships with companies and organizations across multiple fields, bringing together expertise and capabilities that support the opportunities and projects we develop.",
+      "partnerLabel": "Strategic Partner",
+      "footer": "Partnerships built on complementary expertise and capabilities"
+    },
+    "model": {
+      "eyebrow": "PARTNERSHIP PHILOSOPHY",
+      "title": "From Alignment to Integration — From Integration to Value",
+      "subtitle": "We believe effective partnerships bring together a clear opportunity, complementary expertise, the ability to execute, and a shared vision for long-term growth and development.",
+      "closing": "Our partnerships extend ZAN's investment, operations, and project development model, creating value that goes beyond the initial opportunity.",
+      "stages": {
+        "alignment": {
+          "title": "Alignment",
+          "description": "We come together around opportunities and objectives that align with the strengths and direction of each party."
+        },
+        "integration": {
+          "title": "Integration",
+          "description": "We bring together the expertise, capabilities, and relationships needed to move the project forward."
+        },
+        "execution": {
+          "title": "Execution",
+          "description": "We turn complementary capabilities into projects and initiatives that can be executed and developed."
+        },
+        "growth": {
+          "title": "Growth",
+          "description": "We continue to develop value as the project evolves, creating room for long-term growth and expansion."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "COLLABORATE WITH ZAN",
+      "title": "Interested in Building a Strategic Partnership?",
+      "subtitle": "If your organization operates in a sector aligned with ZAN's investment focus, we welcome a conversation about potential collaboration, joint development, or co-investment.",
+      "button": "Contact ZAN Team"
+    }
   }
 }
