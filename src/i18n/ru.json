@@ -130,10 +130,13 @@
   },
   "footer": {
     "rights": "Все права защищены © ZAN Global Investments",
-    "quickLinks": "Быстрые ссылки",
-    "contactInfo": "Контактная информация",
-    "address": "Эр-Рияд, Королевство Саудовская Аравия",
+    "quickLinks": "БЫСТРЫЕ ССЫЛКИ",
+    "contactInfo": "КОНТАКТНАЯ ИНФОРМАЦИЯ",
+    "contactCta": "Связаться с командой ZAN",
+    "address": "Район Аш-Шавкия, Мекка, Саудовская Аравия",
     "officialEmail": "info@zanglobal.sa",
+    "phonePrimary": "+966 59 123 1852",
+    "phoneSecondary": "+966 59 425 9000",
     "domain": "zanglobal.sa"
   },
   "contactForm": {
