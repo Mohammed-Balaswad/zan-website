@@ -132,8 +132,11 @@
     "rights": "جميع الحقوق محفوظة © شركة زان للإستثمارات العالمية",
     "quickLinks": "روابط سريعة",
     "contactInfo": "معلومات التواصل",
-    "address": "الرياض، المملكة العربية السعودية",
+    "contactCta": "تواصل مع فريق زان",
+    "address": "حي الشوقية، مكة المكرمة، المملكة العربية السعودية",
     "officialEmail": "info@zanglobal.sa",
+    "phonePrimary": "+966 59 123 1852",
+    "phoneSecondary": "+966 59 425 9000",
     "domain": "zanglobal.sa"
   },
   "contactForm": {

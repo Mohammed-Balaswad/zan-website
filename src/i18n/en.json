@@ -129,11 +129,14 @@
     }
   },
   "footer": {
-    "rights": "All Rights Reserved © ZAN Global Investments",
-    "quickLinks": "Quick Links",
-    "contactInfo": "Contact Information",
-    "address": "Riyadh, Kingdom of Saudi Arabia",
+    "rights": "All rights reserved © ZAN Global Investments",
+    "quickLinks": "QUICK LINKS",
+    "contactInfo": "CONTACT INFORMATION",
+    "contactCta": "Talk to the ZAN Team",
+    "address": "Al Shawqiyah District, Makkah, Saudi Arabia",
     "officialEmail": "info@zanglobal.sa",
+    "phonePrimary": "+966 59 123 1852",
+    "phoneSecondary": "+966 59 425 9000",
     "domain": "zanglobal.sa"
   },
   "contactForm": {
