@@ -140,44 +140,45 @@
     "domain": "zanglobal.sa"
   },
   "contactForm": {
-    "title": "Business Inquiry & Contact Request",
-    "subtitle": "We welcome your inquiry to explore investment and strategic partnership opportunities.",
+    "title": "How can we assist you?",
+    "subtitle": "Share some details, and the ZAN team will get in touch with you based on the nature of your request.",
     "nameLabel": "Full Name",
     "namePlaceholder": "Enter your full name",
     "orgLabel": "Organization / Company",
-    "orgPlaceholder": "Enter company or organization name",
+    "orgPlaceholder": "Company or organization name",
     "emailLabel": "Email Address",
     "emailPlaceholder": "name@example.com",
     "phoneLabel": "Phone Number",
     "phonePlaceholder": "+966 5X XXX XXXX",
+    "optionalBadge": "Optional",
     "typeLabel": "Request Type",
+    "typePlaceholder": "Select request type...",
     "typeOptions": {
-      "investment": "Investment",
-      "partnership": "Strategic Partnership",
-      "projects": "Project Information",
-      "services": "Services Ecosystem",
+      "investment": "Investment Opportunity",
+      "partnership": "Partnership & Collaboration",
+      "projects": "Project Development",
+      "services": "Services & Saudi Market Entry",
       "general": "General Inquiry",
       "meeting": "Meeting Request"
     },
-    "subjectLabel": "Subject",
-    "subjectPlaceholder": "Subject title",
     "messageLabel": "Request Details",
-    "messagePlaceholder": "Provide details regarding your inquiry...",
-    "consentLabel": "I agree to the privacy consent and allowing the ZAN team to contact me.",
+    "messagePlaceholder": "Write the details of your request here...",
+    "consentLabel": "I consent to the use of my data for the purpose of reviewing my request and communicating with me regarding it.",
     "submitBtn": "Submit Request",
-    "submitting": "Submitting...",
-    "successTitle": "Request Submitted Successfully",
-    "successMessage": "Thank you for reaching out to ZAN. Our team will review your request and get back to you shortly.",
-    "errorTitle": "Submission Failed",
-    "errorMessage": "Please verify your details and try again.",
+    "submitting": "Submitting Request...",
+    "successTitle": "Request Received",
+    "successMessage": "Thank you for reaching out to ZAN. Your request has been successfully received, and our team will review it and get back to you via the provided contact details.",
+    "resetBtn": "Submit Another Request",
+    "errorTitle": "Unable to Submit Request",
+    "errorMessage": "An error occurred while sending your request. Please try again or contact us directly via email.",
+    "errorEmailAction": "Contact via Email",
     "validation": {
-      "nameRequired": "Full name is required",
-      "emailRequired": "Email address is required",
+      "nameRequired": "Please enter your full name",
+      "emailRequired": "Please enter your email address",
       "emailInvalid": "Invalid email address format",
-      "phoneRequired": "Phone number is required",
       "typeRequired": "Please select a request type",
-      "messageRequired": "Request details are required",
-      "consentRequired": "Consent is required to proceed"
+      "messageRequired": "Please write the request details",
+      "consentRequired": "You must agree to the use of data to proceed"
     }
   },
   "aboutPage": {
@@ -532,6 +533,54 @@
       "title": "Interested in Building a Strategic Partnership?",
       "subtitle": "If your organization operates in a sector aligned with ZAN's investment focus, we welcome a conversation about potential collaboration, joint development, or co-investment.",
       "button": "Contact ZAN Team"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Connect With ZAN",
+      "title": "Let's Discuss the Next Opportunity",
+      "subtitle": "Whether you have an investment opportunity, a project worth developing, or a desire to build a partnership within the Saudi market, we are pleased to listen to you and explore the right path.",
+      "contactButton": "Start Your Conversation With Us",
+      "scopes": {
+        "investment": "Investment Opportunities",
+        "partnership": "Partnerships & Collaboration",
+        "projects": "Project Development"
+      }
+    },
+    "info": {
+      "eyebrow": "Direct Contact",
+      "title": "We Look Forward to Connecting With You",
+      "subtitle": "You can reach out to the ZAN team directly or share your request details via the form.",
+      "addressTitle": "Address",
+      "addressValue": "Al Shawqiyyah District, Makkah Al-Mukarramah, Kingdom of Saudi Arabia",
+      "emailTitle": "Email Address",
+      "emailValue": "info@zanglobal.sa",
+      "phoneTitle": "Phone",
+      "phones": [
+        "+966 59 123 1852",
+        "+966 59 425 9000"
+      ],
+      "assuranceTitle": "Areas of Communication",
+      "assuranceText": "We welcome inquiries regarding investments, project development, partnerships, and services for entering the Saudi market."
+    },
+    "closing": {
+      "eyebrow": "Your Next Step",
+      "title": "We Start With the Opportunity and Explore the Right Path to Develop It.",
+      "subtitle": "Share your idea, opportunity, or requirement with us, and the ZAN team will get in touch with you to discuss the details and appropriate steps.",
+      "pillars": {
+        "confidentiality": {
+          "title": "Professional Communication",
+          "description": "We handle every request with clarity and professionalism from the very beginning."
+        },
+        "alignment": {
+          "title": "Understanding Your Needs",
+          "description": "We start by understanding the nature of the opportunity or project and its associated requirements."
+        },
+        "clarity": {
+          "title": "Clear Action Plan",
+          "description": "We determine the appropriate follow-up path based on the nature of the request."
+        }
+      }
     }
   }
 }

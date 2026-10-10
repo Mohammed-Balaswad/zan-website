@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { ContactForm } from '../Contact/ContactForm';
 
 export function PartnershipsPage() {
   const { t } = useLanguage();
