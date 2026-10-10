@@ -25,11 +25,10 @@ export function LanguageSwitcher({ isTransparent = false }) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         type="button"
-        className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-btn transition-colors duration-200 ${
-          isTransparent
-            ? 'text-white bg-white/10 border border-white/25 hover:bg-white/20 backdrop-blur-sm'
-            : 'text-navy bg-white border border-border hover:border-gold/60 shadow-subtle'
-        }`}
+        className={`flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-btn transition-colors duration-200 ${isTransparent
+          ? 'text-white bg-white/10 border border-white/25 hover:bg-white/20 backdrop-blur-sm'
+          : 'text-navy bg-white border border-border hover:border-gold/60 shadow-subtle'
+          }`}
         aria-expanded={isOpen}
         aria-label="Select Language"
       >
@@ -39,9 +38,8 @@ export function LanguageSwitcher({ isTransparent = false }) {
       </button>
 
       {isOpen && (
-        <div className={`absolute top-full mt-1.5 ltr:right-0 rtl:left-0 min-w-[130px] border rounded-btn shadow-elevated py-1 z-50 animate-fadeIn ${
-          isTransparent ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md' : 'bg-white border-border text-navy'
-        }`}>
+        <div className={`absolute top-full mt-1.5 ltr:right-0 rtl:left-0 min-w-[130px] border rounded-xl shadow-elevated overflow-hidden z-50 animate-fadeIn ${isTransparent ? 'bg-navy-dark/95 border-white/15 text-white backdrop-blur-md' : 'bg-white border-border text-navy'
+          }`}>
           {Object.values(supportedLanguages).map((lang) => (
             <button
               key={lang.code}
@@ -49,17 +47,16 @@ export function LanguageSwitcher({ isTransparent = false }) {
                 changeLanguage(lang.code);
                 setIsOpen(false);
               }}
-              className={`w-full text-left rtl:text-right px-4 py-2 text-xs font-medium transition-colors flex items-center justify-between ${
-                language === lang.code
-                  ? isTransparent
-                    ? 'bg-gold/15 text-gold font-bold border-l-2 rtl:border-l-0 rtl:border-r-2 border-gold'
-                    : 'bg-navy/5 text-navy font-bold border-l-2 rtl:border-l-0 rtl:border-r-2 border-gold'
-                  : isTransparent
-                    ? 'text-white/80 hover:bg-white/10 hover:text-white'
-                    : 'text-text-dark hover:bg-surface-offwhite hover:text-navy'
-              }`}
+              className={`w-full text-left rtl:text-right px-4 py-2 text-xs font-medium transition-colors flex items-center justify-between ${language === lang.code
+                ? isTransparent
+                  ? 'bg-gold/15 text-gold border-l-2 rtl:border-l-0 rtl:border-r-2 border-gold'
+                  : 'bg-navy/5 text-navy border-l-2 rtl:border-l-0 rtl:border-r-2 border-gold'
+                : isTransparent
+                  ? 'text-white/80 hover:bg-white/10 hover:text-white'
+                  : 'text-text-dark hover:bg-surface-offwhite hover:text-navy'
+                }`}
             >
-              <span>{lang.name}</span>
+              <span style={{ fontFamily: 'Tajawal, sans-serif' }}>{lang.name}</span>
               {language === lang.code && (
                 <span className="w-1.5 h-1.5 rounded-full bg-gold"></span>
               )}

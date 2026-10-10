@@ -19,7 +19,7 @@ export function Header() {
 
   const investmentRef = useRef(null);
 
-  // التحقق من المسارات التي تتطلب نافبار شفافة في أعلى الصفحة
+  // Check for routes that require a transparent navbar at the top of the page.
   const transparentPaths = [
     '/',
     `/${language}`,

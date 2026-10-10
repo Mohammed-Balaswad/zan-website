@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../../../context/LanguageContext';
 import { IMAGES } from '../../../constants/images';
 import { ArrowUpLeft, ArrowUpRight } from 'lucide-react';
@@ -42,21 +43,6 @@ export function AboutWhoWeAre() {
 
   return (
     <section className="relative overflow-hidden bg-surface-offwhite py-20 md:py-28 lg:py-32">
-      {/* Decorative background detail */}
-      <div
-        aria-hidden="true"
-        className={`pointer-events-none absolute bottom-[-140px] ${
-          isRTL ? 'left-[-100px]' : 'right-[-100px]'
-        } h-[300px] w-[300px] rounded-full border border-gold/30`}
-      />
-
-      <div
-        aria-hidden="true"
-        className={`pointer-events-none absolute bottom-[-190px] ${
-          isRTL ? 'left-[-150px]' : 'right-[-150px]'
-        } h-[400px] w-[400px] rounded-full border border-gold/20`}
-      />
-
       <div className="relative z-10 mx-auto max-w-container px-4 md:px-8">
         <div className="grid grid-cols-1 items-stretch gap-14 lg:grid-cols-12 lg:gap-20">
 
@@ -129,7 +115,7 @@ export function AboutWhoWeAre() {
                 </span>
               </div>
 
-              {/* Main heading - تم توحيد مقاسه ليكون متوافقاً مع الهيكل العام */}
+              {/* Main heading */}
               <h2 className="max-w-2xl text-2xl font-extrabold leading-snug tracking-tight text-navy sm:text-3xl md:text-4xl">
                 {t('aboutPage.whoWeAre.title')}
               </h2>
@@ -146,7 +132,7 @@ export function AboutWhoWeAre() {
               </div>
 
               {/* =====================================================
-                  JOURNEY / AUTO PLAY TIMELINE (2x2 on Mobile, 4 in a row on Desktop)
+                  JOURNEY / AUTO PLAY TIMELINE
               ===================================================== */}
               <div className="mt-12">
                 <div className="relative" dir={isRTL ? 'rtl' : 'ltr'}>
@@ -226,12 +212,10 @@ export function AboutWhoWeAre() {
               </div>
             </div>
 
-            {/* =====================================================
-                SERVICES CTA
-            ================================================     */}
+            {/* SERVICES CTA */}
             <div>
-              <a
-                href={`/${language}/services`}
+              <Link
+                to={`/${language}/services`}
                 className="group mt-9 inline-flex items-center gap-3 text-sm font-bold text-navy-dark transition-all duration-300"
               >
                 <span className="transition-colors duration-300 group-hover:text-gold">
@@ -245,14 +229,12 @@ export function AboutWhoWeAre() {
                     <ArrowUpRight className="h-4 w-4 text-gold transition-all duration-300 group-hover:-translate-y-0.5 group-hover:-translate-x-0.5 group-hover:text-white" />
                   )}
                 </span>
-              </a>
+              </Link>
             </div>
 
           </motion.div>
         </div>
-        
       </div>
-      
     </section>
   );
 }

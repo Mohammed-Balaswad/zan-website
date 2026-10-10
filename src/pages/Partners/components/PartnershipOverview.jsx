@@ -41,7 +41,7 @@ export function PartnershipOverview() {
             <div className="flex items-center gap-3">
               <span className="h-px w-9 bg-gold" />
 
-              <span className="text-[11px] font-bold tracking-[0.18em] text-gold">
+              <span className="text-[12px] font-bold tracking-[0.18em] text-gold">
                 {t('partnersPage.overview.eyebrow')}
               </span>
             </div>

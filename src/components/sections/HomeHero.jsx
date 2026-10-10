@@ -63,7 +63,7 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-normal mb-10 max-w-2xl drop-shadow"
+            className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-2xl sm:max-w-3xl mb-8 md:mb-10 drop-shadow"
           >
             {t('home.hero.subtitle')}
           </motion.p>

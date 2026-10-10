@@ -80,7 +80,7 @@ export function ServicesHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             style={{ lineHeight: '1.25', paddingBottom: '0.2rem' }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.35rem] font-extrabold text-white tracking-tight mb-6 drop-shadow-md"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-white leading-[1.4] sm:leading-[1.35] tracking-tight mb-6 drop-shadow-md"
           >
             {t('servicesPage.hero.title')}
           </motion.h1>
@@ -90,7 +90,7 @@ export function ServicesHero() {
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-3xl mb-8 drop-shadow"
+            className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-2xl sm:max-w-3xl mb-8 md:mb-10 drop-shadow"
           >
             {t('servicesPage.hero.subtitle')}
           </motion.p>

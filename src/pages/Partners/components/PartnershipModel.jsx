@@ -50,23 +50,25 @@ export function PartnershipModel() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end lg:gap-16"
+          className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start lg:gap-16"
         >
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <span className="h-px w-9 bg-gold" />
 
-              <span className="text-[11px] font-bold tracking-[0.18em] text-gold">
+              <span className="text-xs font-bold tracking-[0.18em] text-gold">
                 {t('partnersPage.model.eyebrow')}
               </span>
             </div>
 
-            <h2 className="mt-6 max-w-3xl text-3xl font-black leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.7rem]">
+            {/* تم ضبط تباعد الأسطر هنا ليكون مريحاً واحترافياً */}
+            <h2 className="mt-6 max-w-3xl text-3xl font-black leading-[1.3] sm:leading-[1.25] tracking-tight text-white sm:text-4xl lg:text-[2.7rem]">
               {t('partnersPage.model.title')}
             </h2>
           </div>
 
-          <p className="max-w-xl text-sm leading-[2] text-white/60 sm:text-base lg:col-span-5 lg:pb-1">
+          {/* Subtitle متوازي من الأعلى مع العنوان الرئيسي */}
+          <p className="max-w-xl text-sm leading-[2] text-white/60 sm:text-base lg:col-span-5 lg:pt-14">
             {t('partnersPage.model.subtitle')}
           </p>
         </motion.div>
@@ -83,15 +85,15 @@ export function PartnershipModel() {
             dir={isRTL ? 'rtl' : 'ltr'}
             className="relative"
           >
-            {/* Connecting line */}
+            {/* Connecting line - تم ضبط اقترابه وتددرجه بدقة ليتمركز مع أول وآخر نقطة */}
             <div
               aria-hidden="true"
               className="
                 absolute top-[15px]
                 hidden h-px
-                bg-gradient-to-r from-gold/20 via-gold/55 to-gold/20
+                bg-gradient-to-r from-transparent via-gold/70 to-transparent
                 lg:block
-                left-[6%] right-[6%]
+                left-[8%] right-[8%]
               "
             />
 
