@@ -1,18 +1,24 @@
 import React from 'react';
-import { useLanguage } from '../../context/LanguageContext';
-import { ContactForm } from './ContactForm';
+import { ContactHero } from './components/ContactHero';
+import { ContactInfo } from './components/ContactInfo';
+import { ContactForm } from './components/ContactForm';
+import { ContactClosing } from './components/ContactClosing';
 
 export function ContactPage() {
-  const { t } = useLanguage();
-
   return (
-    <div className="max-w-container mx-auto px-4 md:px-8 py-12">
-      <h1 className="text-2xl font-bold text-navy mb-6">
-        {t('nav.contact')}
-      </h1>
-      <div className="max-w-3xl">
-        <ContactForm />
-      </div>
-    </div>
+    <main>
+      <ContactHero />
+
+      <section className="bg-white py-16 md:py-24 lg:py-28">
+        <div className="mx-auto max-w-container px-4 md:px-8">
+          <div className="grid overflow-hidden border border-border lg:grid-cols-[0.85fr_1.15fr]">
+            <ContactInfo />
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <ContactClosing />
+    </main>
   );
 }

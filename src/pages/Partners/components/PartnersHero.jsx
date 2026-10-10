@@ -9,7 +9,7 @@ export function PartnersHero() {
   return (
     <section className="relative -mt-20 w-full min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-navy-dark text-white pt-24 pb-16 md:pt-28 md:pb-20">
       {/* Background Image with Balanced Cinematic Scrim */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0"> 
         <img
           src={"/images/zan-partners-hero.png"}
           alt="ZAN Strategic Partnerships"

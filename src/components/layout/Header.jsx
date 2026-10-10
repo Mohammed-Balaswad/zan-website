@@ -26,6 +26,7 @@ export function Header() {
     `/${language}/about`,
     `/${language}/services`,
     `/${language}/partners`,
+    `/${language}/contact`,
   ];
 
   const isTransparentPage = transparentPaths.includes(location.pathname);
