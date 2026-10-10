@@ -48,7 +48,8 @@ export function ServicesOverview() {
             <span className="h-px w-8 bg-gold sm:w-10" />
           </div>
 
-          <h2 className="mx-auto max-w-4xl text-3xl font-black leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-[2.7rem]">
+          {/* تم تعديل ارتفاع السطر هنا ليكون مريحاً وأكثر اتساعاً في مختلف اللغات */}
+          <h2 className="mx-auto max-w-4xl text-3xl font-black leading-[1.3] sm:leading-[1.25] tracking-tight text-navy sm:text-4xl lg:text-[2.7rem]">
             {t('servicesPage.overview.title')}
           </h2>
 

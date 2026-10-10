@@ -49,23 +49,23 @@ export function PartnersShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end lg:gap-16"
+          className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-16"
         >
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <span className="h-px w-9 bg-gold" />
 
-              <span className="text-[11px] font-bold tracking-[0.18em] text-gold">
+              <span className="text-xs font-bold tracking-[0.18em] text-gold">
                 {t('partnersPage.showcase.eyebrow')}
               </span>
             </div>
 
-            <h2 className="mt-6 max-w-3xl text-3xl font-black leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-[2.7rem]">
+            <h2 className="mt-6 max-w-3xl text-3xl font-black leading-[1.5] tracking-tight text-navy sm:text-4xl lg:text-[2.5rem]">
               {t('partnersPage.showcase.title')}
             </h2>
           </div>
 
-          <p className="max-w-xl text-sm leading-[2] text-text-muted sm:text-base lg:col-span-5 lg:pb-1">
+          <p className="max-w-xl text-sm leading-[2] text-text-muted sm:text-base lg:col-span-5">
             {t('partnersPage.showcase.subtitle')}
           </p>
         </motion.div>
@@ -92,7 +92,7 @@ export function PartnersShowcase() {
                 className="
                   group relative
                   border-b border-navy/10
-                  py-7
+                  py-7 px-2 sm:px-4
                   transition-colors duration-300
                   hover:bg-white/60
                   sm:py-8
@@ -139,11 +139,11 @@ export function PartnersShowcase() {
                         className="
                           max-h-16 max-w-[170px]
                           w-auto object-contain
-                          opacity-80
-                          grayscale
+                          opacity-100 grayscale-0
+                          lg:opacity-80 lg:grayscale
                           transition-all duration-500
-                          group-hover:opacity-100
-                          group-hover:grayscale-0
+                          lg:group-hover:opacity-100
+                          lg:group-hover:grayscale-0
                           sm:max-h-20
                           sm:max-w-[190px]
                         "
@@ -235,7 +235,7 @@ export function PartnersShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-10 flex items-center gap-4 md:mt-12"
+          className="mt-10 flex items-center gap-4 md:mt-12 px-2 sm:px-0"
         >
           <span className="h-px w-10 shrink-0 bg-gold/50" />
 
