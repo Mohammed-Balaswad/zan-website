@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from '../../context/LanguageContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { PageSEO } from '../seo/PageSEO';
 import { ScrollToTop } from '../ui/ScrollToTop';
 
 function LayoutContent() {
@@ -43,6 +44,7 @@ function LayoutContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-surface-offwhite text-text-dark antialiased">
+      <PageSEO />
       <Header />
       <main className={`flex-grow ${isHomePage ? '' : 'pt-20'}`}>
         <Outlet />

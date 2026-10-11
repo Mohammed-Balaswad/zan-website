@@ -137,7 +137,9 @@
     "officialEmail": "info@zanglobal.sa",
     "phonePrimary": "+966 59 123 1852",
     "phoneSecondary": "+966 59 425 9000",
-    "domain": "zanglobal.sa"
+    "domain": "zanglobal.sa",
+    "privacyPolicy": "Privacy Policy",
+    "whatsappMessage": "Hello, I would like to inquire about ZAN Global Investments services."
   },
   "contactForm": {
     "title": "How can we assist you?",
@@ -163,7 +165,9 @@
     },
     "messageLabel": "Request Details",
     "messagePlaceholder": "Write the details of your request here...",
-    "consentLabel": "I consent to the use of my data for the purpose of reviewing my request and communicating with me regarding it.",
+    "consentBeforeLink": "I agree to the use of my data to review and respond to my inquiry, and I have read the",
+    "consentLink": "Privacy Policy",
+    "consentAfterLink": ".",
     "submitBtn": "Submit Request",
     "submitting": "Submitting Request...",
     "cooldownMessage": "Please wait ({seconds}s)",
@@ -180,6 +184,93 @@
       "typeRequired": "Please select a request type",
       "messageRequired": "Please write the request details",
       "consentRequired": "You must agree to the use of data to proceed"
+    }
+  },
+  "privacyPage": {
+    "eyebrow": "Privacy & Data Protection",
+    "title": "Privacy Policy",
+    "intro": "This policy explains how ZAN Global Investments handles personal data submitted by visitors through the website's contact form, why it is used, and the rights associated with it.",
+    "updatedLabel": "Last updated",
+    "updatedDate": "11 October 2026",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "body": "When you use the contact form, we may collect your name, email address, inquiry type, and message. You may optionally provide your organization or company name and phone number. Required fields allow the company to review and respond to your inquiry."
+      },
+      {
+        "title": "2. Why We Use Your Data",
+        "body": "We use submitted information to review inquiries and requests relating to investment, partnerships, and collaboration; respond to the person making the inquiry; and follow up on related correspondence. The form is not designed to collect sensitive data, and we do not use its submissions to send unrelated marketing messages."
+      },
+      {
+        "title": "3. Processing and Disclosure",
+        "body": "The website uses Web3Forms to transmit contact-form submissions to the designated receiving email inbox. Web3Forms acts as a service provider for form processing, and data may be processed through its infrastructure and subprocessors. Its published privacy policy provides further information about its infrastructure and data handling. External services may also be used to load the website's fonts. We do not sell personal data."
+      },
+      {
+        "title": "4. Storage and Retention",
+        "body": "According to its published policy, Web3Forms retains form-submission data for up to three years, unless a shorter period applies to the plan or the data is deleted earlier. Email notification copies may remain in the receiving mailbox until deleted. The company retains correspondence for as long as reasonably necessary to respond to the inquiry and meet applicable legal obligations, after which it deletes or appropriately disposes of the data when it is no longer needed, subject to any legal retention requirements."
+      },
+      {
+        "title": "5. Security and Processing Locations",
+        "body": "We use external services to operate the contact form and load fonts. Those providers process data under their own policies and terms. Data may be processed or stored in locations outside Saudi Arabia. This policy does not specify the exact geographical location of provider servers, and using these services alone does not confirm that all requirements for international data transfers have been met. Relevant processing and protection arrangements must be reviewed before launch."
+      },
+      {
+        "title": "6. Your Rights",
+        "body": "Subject to applicable law, you may request information about how your data is processed, access your data, obtain a readable copy, request correction or completion, or request destruction where legal conditions are met. You may also withdraw consent where consent is the applicable legal basis. We may need to verify your identity before acting on a request. Requests will be handled within applicable statutory time limits, subject to any legally permitted extension."
+      },
+      {
+        "title": "7. Cookies and Third-Party Services",
+        "body": "The current website uses external services to load fonts and process contact-form submissions. This policy does not state that advertising or behavioral analytics tools are in use. If such tools are added later, we will review whether this policy and related notices need to be updated. Hosting and security providers may also maintain technical logs under their own configurations and policies."
+      },
+      {
+        "title": "8. Privacy Requests and Policy Updates",
+        "body": "To exercise your data rights or ask a question about this policy, contact the company through the website's contact form and explain the nature of your request. We will review this policy if the website's data collection, processing, or service providers change, and update the revision date when material changes are made."
+      }
+    ],
+    "contactLink": "Go to Contact Page",
+    "closing": "This policy describes the data processing associated with the website's current functionality. It does not replace the company's review of the data-protection requirements applicable to its activities."
+  },
+  "seo": {
+    "pages": {
+      "home": {
+        "title": "ZAN Global Investments | Official Website",
+        "description": "Discover ZAN Global Investments, its services, projects, and opportunities for collaboration."
+      },
+      "about": {
+        "title": "About Us | ZAN Global Investments",
+        "description": "Learn about ZAN Global Investments, its vision, and its approach to business and investment."
+      },
+      "projects": {
+        "title": "Projects | ZAN Global Investments",
+        "description": "Explore the projects and work presented by ZAN Global Investments."
+      },
+      "opportunities": {
+        "title": "Opportunities | ZAN Global Investments",
+        "description": "Explore opportunities for investment and collaboration presented by ZAN Global Investments."
+      },
+      "services": {
+        "title": "Services | ZAN Global Investments",
+        "description": "Discover the services offered by ZAN Global Investments."
+      },
+      "partners": {
+        "title": "Partners | ZAN Global Investments",
+        "description": "Learn about the partners and organizations associated with ZAN Global Investments."
+      },
+      "partnerships": {
+        "title": "Partnerships | ZAN Global Investments",
+        "description": "Explore partnership and collaboration opportunities with ZAN Global Investments."
+      },
+      "contact": {
+        "title": "Contact Us | ZAN Global Investments",
+        "description": "Contact ZAN Global Investments regarding inquiries, partnerships, and collaboration."
+      },
+      "privacy": {
+        "title": "Privacy Policy | ZAN Global Investments",
+        "description": "Learn how personal data is collected and processed through the ZAN Global Investments website."
+      },
+      "notFound": {
+        "title": "Page Not Found | ZAN Global Investments",
+        "description": "The requested page is unavailable. Return to the official ZAN Global Investments website."
+      }
     }
   },
   "aboutPage": {
@@ -561,6 +652,7 @@
         "+966 59 123 1852",
         "+966 59 425 9000"
       ],
+      "whatsappMessage": "Hello, I would like to inquire about investment opportunities and services at ZAN Global Investments.",
       "assuranceTitle": "Areas of Communication",
       "assuranceText": "We welcome inquiries regarding investments, project development, partnerships, and services for entering the Saudi market."
     },

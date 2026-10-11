@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { CheckCircle2, Loader2, Send, AlertCircle, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
 export function ContactForm() {
-  const { t, isRTL } = useLanguage();
+  const { language, t, isRTL } = useLanguage();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -174,7 +175,7 @@ export function ContactForm() {
       }
 
       setStatus('success');
-      
+
       localStorage.setItem('zan_last_submit_time', Date.now().toString());
       setCooldown(60);
 
@@ -320,11 +321,10 @@ export function ContactForm() {
               }
               placeholder={t('contactForm.namePlaceholder')}
               aria-invalid={Boolean(errors.name)}
-              className={`h-12 w-full rounded-lg border bg-white px-4 text-sm text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${
-                errors.name
+              className={`h-12 w-full rounded-lg border bg-white px-4 text-sm text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${errors.name
                   ? 'border-red-300 focus:border-red-400 focus:ring-red-100'
                   : 'border-[#E5E7EB] focus:border-[#C6A15B] focus:ring-[#C6A15B]/10'
-              }`}
+                }`}
             />
 
             {errors.name && (
@@ -381,11 +381,10 @@ export function ContactForm() {
               }
               placeholder={t('contactForm.emailPlaceholder')}
               aria-invalid={Boolean(errors.email)}
-              className={`h-12 w-full rounded-lg border bg-white px-4 text-sm text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${
-                errors.email
+              className={`h-12 w-full rounded-lg border bg-white px-4 text-sm text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${errors.email
                   ? 'border-red-300 focus:border-red-400 focus:ring-red-100'
                   : 'border-[#E5E7EB] focus:border-[#C6A15B] focus:ring-[#C6A15B]/10'
-              }`}
+                }`}
             />
 
             {errors.email && (
@@ -437,22 +436,20 @@ export function ContactForm() {
             aria-haspopup="listbox"
             aria-expanded={isDropdownOpen}
             aria-labelledby="contact-request-type-label"
-            className={`flex h-12 w-full items-center justify-between rounded-lg border bg-white px-4 text-sm outline-none transition-all ${
-              errors.requestType
+            className={`flex h-12 w-full items-center justify-between rounded-lg border bg-white px-4 text-sm outline-none transition-all ${errors.requestType
                 ? 'border-red-300 focus:border-red-400 ring-2 ring-red-100'
                 : isDropdownOpen
-                ? 'border-[#C6A15B] ring-2 ring-[#C6A15B]/10 shadow-sm'
-                : 'border-[#E5E7EB] hover:border-[#061421]/30'
-            }`}
+                  ? 'border-[#C6A15B] ring-2 ring-[#C6A15B]/10 shadow-sm'
+                  : 'border-[#E5E7EB] hover:border-[#061421]/30'
+              }`}
           >
             <span className={selectedRequestType ? 'text-[#17212B] font-medium' : 'text-[#9AA3AB]'}>
               {selectedRequestType ? selectedRequestType.label : t('contactForm.typePlaceholder')}
             </span>
 
             <ChevronDown
-              className={`h-4 w-4 text-[#C6A15B] transition-transform duration-300 ${
-                isDropdownOpen ? 'rotate-180' : ''
-              }`}
+              className={`h-4 w-4 text-[#C6A15B] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''
+                }`}
             />
           </button>
 
@@ -473,11 +470,10 @@ export function ContactForm() {
                       updateField('requestType', option.id);
                       setIsDropdownOpen(false);
                     }}
-                    className={`flex cursor-pointer items-center justify-between rounded-lg px-3.5 py-2.5 text-sm transition-colors ${
-                      isSelected
+                    className={`flex cursor-pointer items-center justify-between rounded-lg px-3.5 py-2.5 text-sm transition-colors ${isSelected
                         ? 'bg-[#0B1F33] text-white font-medium'
                         : 'text-[#17212B] hover:bg-[#F9F8F6] hover:text-[#C6A15B]'
-                    }`}
+                      }`}
                   >
                     <span>{option.label}</span>
                     {isSelected && <Check className="h-4 w-4 text-[#C6A15B]" />}
@@ -512,11 +508,10 @@ export function ContactForm() {
             }
             placeholder={t('contactForm.messagePlaceholder')}
             aria-invalid={Boolean(errors.message)}
-            className={`w-full resize-y rounded-lg border bg-white px-4 py-3 text-sm leading-7 text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${
-              errors.message
+            className={`w-full resize-y rounded-lg border bg-white px-4 py-3 text-sm leading-7 text-[#17212B] outline-none transition placeholder:text-[#9AA3AB] focus:ring-2 ${errors.message
                 ? 'border-red-300 focus:border-red-400 focus:ring-red-100'
                 : 'border-[#E5E7EB] focus:border-[#C6A15B] focus:ring-[#C6A15B]/10'
-            }`}
+              }`}
           />
 
           {errors.message && (
@@ -535,11 +530,21 @@ export function ContactForm() {
               onChange={(e) =>
                 updateField('consent', e.target.checked)
               }
+              aria-invalid={Boolean(errors.consent)}
               className="mt-1 h-4 w-4 shrink-0 rounded border-[#CBD5E1] text-[#0B1F33] focus:ring-[#C6A15B]"
             />
 
             <span className="text-sm leading-6 text-[#66717C]">
-              {t('contactForm.consentLabel')}
+              {t('contactForm.consentBeforeLink')}{' '}
+
+              <Link
+                to={`/${language}/privacy`}
+                className="font-medium text-[#0B1F33] underline decoration-[#C6A15B] underline-offset-4 transition-colors hover:text-[#C6A15B]"
+              >
+                {t('contactForm.consentLink')}
+              </Link>
+
+              {t('contactForm.consentAfterLink')}
             </span>
           </label>
 

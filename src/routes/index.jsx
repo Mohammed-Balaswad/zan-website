@@ -11,6 +11,7 @@ import { PartnershipsPage } from '../pages/Partnerships/PartnershipsPage';
 import { ContactPage } from '../pages/Contact/ContactPage';
 import { NotFoundPage } from '../pages/NotFound/NotFoundPage';
 import { DEFAULT_LANGUAGE } from '../i18n';
+import { PrivacyPage } from '../pages/Privacy/PrivacyPage';
 
 export function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ export function AppRoutes() {
         <Route path="partners" element={<PartnersPage />} />
         <Route path="partnerships" element={<PartnershipsPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="privacy" element={<PrivacyPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
 
