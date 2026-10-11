@@ -86,7 +86,10 @@ export function ContactInfo() {
               {t('contactPage.info.phones', { returnObjects: true }).map((phone) => (
                 <a
                   key={phone}
-                  href={`tel:${phone.replace(/\s/g, '')}`}
+                  href={`https://wa.me/${phone.replace(/[\s+]/g, '')}?text=${encodeURIComponent(t('contactPage.info.whatsappMessage'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={phone}
                   dir="ltr"
                   className="block text-sm text-white/90 transition-colors hover:text-gold"
                 >

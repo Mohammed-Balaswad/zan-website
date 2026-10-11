@@ -117,9 +117,8 @@ export function Footer() {
                 "
               >
                 <ArrowUpLeft
-                  className={`h-3.5 w-3.5 ${
-                    isRTL ? '' : 'rotate-90'
-                  }`}
+                  className={`h-3.5 w-3.5 ${isRTL ? '' : 'rotate-90'
+                    }`}
                 />
               </span>
             </Link>
@@ -194,7 +193,9 @@ export function Footer() {
                 <Phone className="h-4 w-4 shrink-0 text-gold" />
 
                 <a
-                  href={`tel:${t('footer.phonePrimary').replace(/\s/g, '')}`}
+                  href={`https://wa.me/${t('footer.phonePrimary').replace(/[\s+]/g, '')}?text=${encodeURIComponent(t('footer.whatsappMessage'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={t('footer.phonePrimary')}
                   dir="ltr"
                   className="
@@ -215,7 +216,9 @@ export function Footer() {
                 <Phone className="h-4 w-4 shrink-0 text-gold" />
 
                 <a
-                  href={`tel:${t('footer.phoneSecondary').replace(/\s/g, '')}`}
+                  href={`https://wa.me/${t('footer.phoneSecondary').replace(/[\s+]/g, '')}?text=${encodeURIComponent(t('footer.whatsappMessage'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={t('footer.phoneSecondary')}
                   dir="ltr"
                   className="
@@ -237,20 +240,39 @@ export function Footer() {
         {/* Bottom */}
         <div
           className="
-            flex flex-col items-center justify-between
-            gap-4 border-t border-white/10
-            pt-7
-            text-xs
-            md:flex-row
-          "
+    flex flex-col items-center justify-between
+    gap-5 border-t border-white/10
+    pt-7
+    text-xs
+    md:flex-row
+  "
         >
           <p className="text-xs text-white/45">
             {t('footer.rights')}
           </p>
 
-          <span className="select-none text-[11px] tracking-wide text-white/30">
-            {t('footer.domain')}
-          </span>
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            <Link
+              to={`/${language}/privacy`}
+              onClick={(e) =>
+                handleLinkClick(e, `/${language}/privacy`)
+              }
+              className="
+        rounded-sm text-xs text-white/55
+        transition-colors duration-300
+        hover:text-gold
+        focus:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-gold
+      "
+            >
+              {t('footer.privacyPolicy')}
+            </Link>
+
+            <span className="select-none text-[11px] tracking-wide text-white/30">
+              {t('footer.domain')}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

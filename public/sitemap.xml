@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Home Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/services"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/services"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/services"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projects Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/projects</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/projects</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/projects"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Opportunities Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/opportunities</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/opportunities"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/opportunities</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/opportunities"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/opportunities</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/opportunities"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/opportunities"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Partners Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partners"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partners"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partners"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Partnerships Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/partnerships</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partnerships"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/partnerships</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partnerships"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/partnerships</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/partnerships"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy Pages -->
+  <url>
+    <loc>https://zanglobal.sa/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/privacy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/privacy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://zanglobal.sa/ru/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://zanglobal.sa/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zanglobal.sa/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://zanglobal.sa/ru/privacy"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
