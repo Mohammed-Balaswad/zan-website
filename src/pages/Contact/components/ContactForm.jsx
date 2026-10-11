@@ -13,12 +13,35 @@ export function ContactForm() {
     requestType: '',
     message: '',
     consent: false,
+    botcheck: '', // حقل Honeypot لكشف البوتات
   });
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
+  const [cooldown, setCooldown] = useState(0); // مؤقت لمنع التكرار
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  // التحقق من الـ Cooldown عند تحميل المكون
+  useEffect(() => {
+    const lastSubmitTime = localStorage.getItem('zan_last_submit_time');
+    if (lastSubmitTime) {
+      const elapsed = Date.now() - parseInt(lastSubmitTime, 10);
+      const cooldownTime = 60000; // 60 ثانية
+      if (elapsed < cooldownTime) {
+        setCooldown(Math.ceil((cooldownTime - elapsed) / 1000));
+      }
+    }
+  }, []);
+
+  // عداد تنازلي للـ Cooldown
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setInterval(() => {
+      setCooldown((prev) => (prev > 1 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [cooldown]);
 
   // الترتيب الاستراتيجي الجديد للخيارات
   const requestTypeOptions = [
@@ -96,6 +119,13 @@ export function ContactForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (cooldown > 0) return;
+
+    if (formData.botcheck) {
+      setStatus('success');
+      return;
+    }
+
     if (!validate()) {
       return;
     }
@@ -144,6 +174,9 @@ export function ContactForm() {
       }
 
       setStatus('success');
+      
+      localStorage.setItem('zan_last_submit_time', Date.now().toString());
+      setCooldown(60);
 
       setFormData({
         name: '',
@@ -153,6 +186,7 @@ export function ContactForm() {
         requestType: '',
         message: '',
         consent: false,
+        botcheck: '',
       });
 
       setErrors({});
@@ -173,6 +207,7 @@ export function ContactForm() {
       requestType: '',
       message: '',
       consent: false,
+      botcheck: '',
     });
 
     setErrors({});
@@ -255,10 +290,12 @@ export function ContactForm() {
         noValidate
         className="space-y-6"
       >
-        {/* Honeypot */}
+        {/* Honeypot حقل مخفي لكشف البوتات */}
         <input
-          type="checkbox"
+          type="text"
           name="botcheck"
+          value={formData.botcheck}
+          onChange={(e) => updateField('botcheck', e.target.value)}
           className="hidden"
           tabIndex="-1"
           autoComplete="off"
@@ -516,7 +553,7 @@ export function ContactForm() {
         {/* Submit */}
         <button
           type="submit"
-          disabled={status === 'submitting'}
+          disabled={status === 'submitting' || cooldown > 0}
           className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#0B1F33] px-6 text-sm font-medium text-white transition hover:bg-[#061421] disabled:cursor-not-allowed disabled:opacity-70 md:w-auto"
         >
           {status === 'submitting' ? (
@@ -527,6 +564,8 @@ export function ContactForm() {
               />
               {t('contactForm.submitting')}
             </>
+          ) : cooldown > 0 ? (
+            t('contactForm.cooldownMessage').replace('{seconds}', cooldown)
           ) : (
             <>
               <Send size={17} />
