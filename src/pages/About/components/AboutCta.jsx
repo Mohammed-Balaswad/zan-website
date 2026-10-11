@@ -18,14 +18,17 @@ export function AboutCta() {
           transition={{ duration: 0.6 }}
           className="relative rounded-card overflow-hidden bg-navy text-white p-8 sm:p-12 md:p-16 border border-gold/40 shadow-elevated"
         >
-          {/* Architectural Background Texture */}
+          {/* Architectural Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src={IMAGES.ctaBanner}
-              alt="ZAN Institutional Partnerships"
-              className="w-full h-full object-cover object-center filter brightness-50 opacity-40"
+              src="/images/sections/cta-banner.avif"
+              alt="ZAN Corporate Development"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              className="w-full h-full object-cover object-center opacity-85"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-navy-dark/80" />
+            <div className="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-navy via-navy/80 to-navy/70" />
           </div>
 
           {/* Banner Content */}

@@ -21,11 +21,14 @@ export function HomeCtaSection() {
           {/* Architectural Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src={IMAGES.ctaBanner}
+              src="/images/sections/cta-banner.avif"
               alt="ZAN Corporate Development"
-              className="w-full h-full object-cover object-center filter brightness-50 opacity-40"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              className="w-full h-full object-cover object-center opacity-85"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy/90 to-navy-dark/80" />
+            <div className="absolute inset-0 bg-gradient-to-r rtl:bg-gradient-to-l from-navy via-navy/80 to-navy/70" />
           </div>
 
           {/* Banner Content */}
@@ -38,7 +41,7 @@ export function HomeCtaSection() {
               {t('home.cta.title')}
             </h2>
 
-            <p className="text-xs sm:text-sm text-text-light/90 leading-relaxed">
+            <p className="text-xs sm:text-sm text-text-light/95 leading-relaxed font-medium">
               {t('home.cta.subtitle')}
             </p>
 

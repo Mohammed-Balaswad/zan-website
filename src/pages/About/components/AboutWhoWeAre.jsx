@@ -66,8 +66,11 @@ export function AboutWhoWeAre() {
               {/* Main image container stretching to full height */}
               <div className="relative z-10 flex flex-1 overflow-hidden rounded-[20px] bg-navy shadow-[0_30px_70px_-30px_rgba(6,20,33,0.35)]">
                 <img
-                  src={IMAGES.aboutWhoWeAre}
+                  src={"/images/sections/about-who-we-are.avif"}
                   alt={t('aboutPage.whoWeAre.title')}
+                  width="800"
+                  height="1000"
+                  loading="lazy"
                   className="h-full w-full object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
                 />
 

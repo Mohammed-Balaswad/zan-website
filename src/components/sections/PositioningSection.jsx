@@ -66,8 +66,11 @@ export function PositioningSection() {
 
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src={"/images/about-section-image.webp"}
+                  src={"/images/sections/zan-positioning.avif"}
                   alt={t('home.positioning.imageAlt')}
+                  width="800"
+                  height="1000"
+                  loading="lazy"
                   className="w-full aspect-[4/5] object-cover object-center"
                 />
 

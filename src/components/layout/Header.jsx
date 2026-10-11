@@ -112,7 +112,7 @@ export function Header() {
             aria-label={t('common.companyName')}
           >
             <img
-              src="/images/ZAN-LOGO-2.svg"
+              src="/brand/ZAN-LOGO.svg"
               alt="ZAN Global Investments Logo"
               className={`h-9 sm:h-10 md:h-11 w-auto max-w-[160px] sm:max-w-[180px] xl:max-w-[200px] object-contain transition-all duration-300 ${isTransparent ? 'brightness-0 invert drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' : ''
                 } group-hover:scale-[1.02]`}

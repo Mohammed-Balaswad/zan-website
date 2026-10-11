@@ -11,8 +11,11 @@ export function AboutHero() {
       {/* Background Image with Balanced Cinematic Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src={"/images/zan-about-hero.png"}
+          src={"/images/heroes/zan-about-hero.webp"}
           alt="ZAN Institutional Architecture"
+          width="1920"
+          height="1080"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.85] contrast-[1.06] transition-transform duration-1000"
         />
 
