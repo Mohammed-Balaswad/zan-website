@@ -16,7 +16,7 @@ export function PartnersHero() {
           width="1920"
           height="1080"
           fetchPriority="high"
-          className="w-full h-full object-cover object-center scale-105 filter brightness-[0.85] contrast-[1.06] transition-transform duration-1000"
+          className="w-full h-full object-cover object-center md:scale-105 md:transform md:filter md:brightness-[0.85] md:contrast-[1.06] transition-transform duration-1000"
         />
 
         {/* Cinematic Top-to-Bottom Scrim */}
