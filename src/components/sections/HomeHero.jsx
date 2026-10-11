@@ -12,8 +12,11 @@ export function HomeHero() {
       {/* Background Image with Controlled Cinematic Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/riyadh-hero-3.jpg"
+          src="/images/heroes/zan-home-hero.webp"
           alt="Riyadh Skyline Architecture - ZAN Global Investments"
+          width="1920"
+          height="1080"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center scale-105 transform filter brightness-[0.85] contrast-[1.06] transition-transform duration-1000"
         />
         {/* Top Vignette Gradient for Navbar Contrast */}

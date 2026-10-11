@@ -73,7 +73,7 @@ export function Footer() {
               aria-label={t('common.companyName')}
             >
               <img
-                src="/images/ZAN-LOGO-2.svg"
+                src="/brand/ZAN-LOGO.svg"
                 alt={t('common.companyName')}
                 className="
                   h-9 w-auto max-w-[165px]
